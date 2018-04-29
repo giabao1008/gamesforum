@@ -1,18 +1,19 @@
-// 1 
-Clone project on github to c:/xampp/htdocs/
-//2 
-download composer in https://getcomposer.org/download/
-//3 
-Install  composer
-// 4 
-CD  to url/of/project/in/c/xampp/htdocs
-// 5
-run commandline (cmd) in its folder
-//6 
-php init 
-// 
-composer install
+// 1  
+<br> 
+Clone project on github to c:/xampp/htdocs/<br> 
+//2 <br> 
+download composer in https://getcomposer.org/download/<br> 
+//3 <br> 
+Install  composer<br> 
+// 4 <br> 
+CD  to url/of/project/in/c/xampp/htdocs<br> 
+// 5<br> 
+run commandline (cmd) in its folder<br> 
+//6 <br> 
+php init <br> 
+// <br> 
+composer install<br> 
+<br> 
 
-
-###################### 
-Create by Quang Tuyen
+###################### <br> 
+Create by Quang Tuyen<br> 
