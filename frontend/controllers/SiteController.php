@@ -118,19 +118,25 @@ class SiteController extends Controller
     public function actionContact()
     {
         $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
+        if ($model->load(Yii::$app->request->post())) {
+            $data_post = Yii::$app->request->post();
+
+            if ($model->sendEmail(Yii::$app->params['adminEmail'])  ) {
                 Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
+                $contacts = new Contacts();
+                $contacts->name =$data_post['ContactForm']['name'];
+                $contacts->email =$data_post['ContactForm']['email'];
+                $contacts->subject =$data_post['ContactForm']['subject'];
+                $contacts->body =$data_post['ContactForm']['body'];
+                $contacts->send_at ='' ;
             } else {
                 Yii::$app->session->setFlash('error', 'There was an error sending your message.');
             }
-
             return $this->refresh();
-        } else {
-            return $this->render('contact', [
-                'model' => $model,
-            ]);
         }
+        return $this->render('contact', [
+            'model' => $model,
+        ]);
     }
 
     /**

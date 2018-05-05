@@ -1,31 +1,34 @@
-<div class="header">
-    <!-- Navbar -->
-    <nav class="navbar navbar-default">
-        <div class="container">
+<?php if (Yii::$app->requestedRoute === 'site/index') { ?>
+    <div class="header">
+        <!-- Navbar -->
+        <nav class="navbar navbar-default">
+            <div class="container">
 
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="index.html"><h1>Games <img src="<?php @web ?>/images/c1.png" alt=" "/> Zone</h1></a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/trang-chu"><h1>Games <img src="<?php @web ?>/images/c1.png" alt=" "/> Forum</h1></a>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hover-effect"><a href="/about-us">About</a></li>
+                        <li class="hover-effect"><a href="/games">Games</a></li>
+                        <li class="hover-effect"><a href="/news">News</a></li>
+                        <li class="hover-effect"><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+
             </div>
+        </nav>
+        <!-- //Navbar -->
 
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hover-effect"><a href="/about-us">About</a></li>
-                    <li class="hover-effect"><a href="/games">Games</a></li>
-                    <li class="hover-effect"><a href="/news">News</a></li>
-                    <li class="hover-effect"><a href="/contact">Contact</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </nav>
-    <!-- //Navbar -->
+    </div>
 
     <!-- Slider -->
     <div class="slider">
@@ -43,8 +46,7 @@
     </div>
     <!-- //Slider -->
 
-</div>
-<script defer="defer">
+    <script defer="defer">
         $(function () {
             $("#slider").responsiveSlides({
                 auto: true,
@@ -54,6 +56,33 @@
                 pager: true,
             });
         });
-</script>
+    </script>
+<?php } else { ?>
+    <div class="sub-banner">
+        <!-- Navbar -->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/trang-chu"><h1>Games <img src="<?php @web ?>/images/c1.png" alt=" "/> Zone</h1></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hover-effect"><a href="/about-us">About</a></li>
+                        <li class="hover-effect"><a href="/games">Games</a></li>
+                        <li class="hover-effect"><a href="/news">News</a></li>
+                        <li class="hover-effect"><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+<?php } ?>
 <!-- //Banner-Slider-JavaScript -->
 <!-- //Header -->

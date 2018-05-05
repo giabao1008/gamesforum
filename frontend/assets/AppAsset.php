@@ -18,7 +18,6 @@ class AppAsset extends AssetBundle
         'css/style.css',
     ];
     public $js = [
-        'js/jquery.min.js',
         'js/bootstrap.js',
         'js/responsiveslides.min.js',
         'js/jquery.flexisel.js',
@@ -30,7 +29,6 @@ class AppAsset extends AssetBundle
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
-        'yii\web\jQueryAsset'
     ];
    public $jsOptions = ['position' => \yii\web\View::POS_END];
 
