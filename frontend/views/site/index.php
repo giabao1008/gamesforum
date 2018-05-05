@@ -36,7 +36,7 @@ $this->title = 'Games Forum - Game zone for Gamer';
             </li>
         </ul>
         <script type="text/javascript">
-            $(window).load(function() {
+            $(window).on('load', function(){
                 $("#flexiselDemo1").flexisel({
                     visibleItems: 4,
                     animationSpeed: 1000,
@@ -200,7 +200,7 @@ $this->title = 'Games Forum - Game zone for Gamer';
 
             <script defer src="js/jquery.flexslider.js"></script>
             <script type="text/javascript">
-                $(window).load(function(){
+                $(window).on('load', function(){
                     $('.flexslider').flexslider({
                         animation: "slide",
                         start: function(slider){

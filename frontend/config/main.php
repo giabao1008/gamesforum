@@ -66,7 +66,19 @@ return [
         'formatter' => [
             'dateFormat' => 'php:d-m-Y',
             'datetimeFormat' => 'php: H:i:s d-m-Y',
-        ]
+        ],
+        'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'sourcePath' => null,   // do not publish the bundle
+                    'js' => [
+                        '/js/jquery.min.js', // here specify your version of jquery
+
+                    ],
+                    'jsOptions' => [ 'position' => \yii\web\View::POS_HEAD ],
+                ],
+            ],
+        ],
 
     ],
     'params' => $params,
