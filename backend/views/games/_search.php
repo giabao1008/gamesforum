@@ -21,7 +21,7 @@ use yii\widgets\ActiveForm;
 
     <?php  echo $form->field($model, 'require') ?>
 
-    <?php  echo $form->field($model, 'is_Hot') ?>
+    <?php // echo $form->field($model, 'is_Hot') ?>
 
     <?php // echo $form->field($model, 'create_at') ?>
 

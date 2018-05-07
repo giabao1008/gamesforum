@@ -49,14 +49,19 @@ return [
 //            'showScriptName' => false,
 //           'rules' => $rulesUrl,
 //        ],
+        'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'sourcePath' => null,   // do not publish the bundle
+                    'js' => [
+                        '/js/jquery.min.js', // here specify your version of jquery
 
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-
+                    ],
+                    'jsOptions' => [ 'position' => \yii\web\View::POS_HEAD ],
+                ],
             ],
         ],
+        'urlManager' => require(__DIR__ . '/urlManager.php'),
     ],
     'params' => $params,
 ];

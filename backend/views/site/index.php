@@ -2,52 +2,34 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+use yii\widgets\Breadcrumbs;
+
+$this->title = 'Trang quản trị';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
-
-    </div>
+<div class="menu">
+    <a href="index.html" class="col-md-2 col-sm-5 col-xs-5">
+        <i class="fa fa-home"></i><br> <span>Trang quản trị</span>
+    </a>
+    <a href="post.html" class="col-md-2 col-sm-5 col-xs-5">
+        <i class="fa fa-edit"></i><br> <span>Tin tức</span>
+    </a>
+    <a href="product.html" class="col-md-2 col-sm-5 col-xs-5">
+        <i class="fa fa-fire"></i><br> <span>Sản phẩm</span>
+    </a>
+    <a href="type_product.html" class="col-md-2 col-sm-5 col-xs-5">
+        <i class="fa fa-bars"></i><br> <span>Loại sản phẩm</span>
+    </a>
+    <a href="contact.html" class="col-md-2 col-sm-5 col-xs-5">
+        <i class="fa fa-envelope-o"></i><br> <span>Phản hồi</span>
+    </a>
+    <a href="slider.html" class="col-md-2 col-sm-5 col-xs-5">
+        <i class="fa fa-picture-o"></i><br> <span>Slider</span>
+    </a>
+    <a href="user.html" class="col-md-2 col-sm-5 col-xs-5">
+        <i class="fa fa-user"></i><br> <span>Tài khoản</span>
+    </a>
+    <a href="setting.html" class="col-md-2 col-sm-5 col-xs-5">
+        <i class="fa fa-wrench"></i><br> <span>Cấu hình</span>
+    </a>
 </div>
