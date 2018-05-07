@@ -8,5 +8,9 @@ class NewsController extends \yii\web\Controller
     {
         return $this->render('game');
     }
+    public function actionContact()
+    {
+        return $this->render('game');
+    }
 
 }

@@ -120,15 +120,12 @@ class SiteController extends Controller
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post())) {
             $data_post = Yii::$app->request->post();
-
             if ($model->sendEmail(Yii::$app->params['adminEmail'])  ) {
                 Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
-                $contacts = new Contacts();
-                $contacts->name =$data_post['ContactForm']['name'];
-                $contacts->email =$data_post['ContactForm']['email'];
-                $contacts->subject =$data_post['ContactForm']['subject'];
-                $contacts->body =$data_post['ContactForm']['body'];
-                $contacts->send_at ='' ;
+                $model->name =$data_post['ContactForm']['name'];
+                $model->email =$data_post['ContactForm']['email'];
+                $model->subject =$data_post['ContactForm']['subject'];
+                $model->body = $data_post['ContactForm']['body'];
             } else {
                 Yii::$app->session->setFlash('error', 'There was an error sending your message.');
             }

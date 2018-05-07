@@ -1,4 +1,4 @@
-<?php if (Yii::$app->requestedRoute === 'site/index') { ?>
+<?php if (Yii::$app->requestedRoute === 'site/index' || Yii::$app->requestedRoute === '' ) { ?>
     <div class="header">
         <!-- Navbar -->
         <nav class="navbar navbar-default">

@@ -24,28 +24,28 @@
         <div class="col-md-5 footer-middle-w3">
             <h4>Latest Games</h4>
             <div class="col-md-3 img-w3-agile">
-                <a href="single.html"><img src="images/ng1.jpg" alt=" " /></a>
+                <a href="single.html"><img src="<?php @web ?>/images/ng1.jpg" alt=" " /></a>
             </div>
             <div class="col-md-3 img-w3-agile">
-                <a href="single.html"><img src="images/ng2.jpg" alt=" " /></a>
+                <a href="single.html"><img src="<?php @web ?>/images/ng2.jpg" alt=" " /></a>
             </div>
             <div class="col-md-3 img-w3-agile">
-                <a href="single.html"><img src="images/ng3.jpg" alt=" " /></a>
+                <a href="single.html"><img src="<?php @web ?>/images/ng3.jpg" alt=" " /></a>
             </div>
             <div class="col-md-3 img-w3-agile">
-                <a href="single.html"><img src="images/ng4.jpg" alt=" " /></a>
+                <a href="single.html"><img src="<?php @web ?>/images/ng4.jpg" alt=" " /></a>
             </div>
             <div class="col-md-3 img-w3-agile footer-middle-wthree">
-                <a href="single.html"><img src="images/ng5.jpg" alt=" " /></a>
+                <a href="single.html"><img src="<?php @web ?>/images/ng5.jpg" alt=" " /></a>
             </div>
             <div class="col-md-3 img-w3-agile footer-middle-wthree">
-                <a href="single.html"><img src="images/ng6.jpg" alt=" " /></a>
+                <a href="single.html"><img src="<?php @web ?>/images/ng6.jpg" alt=" " /></a>
             </div>
             <div class="col-md-3 img-w3-agile footer-middle-wthree">
-                <a href="single.html"><img src="images/ng7.jpg" alt=" " /></a>
+                <a href="single.html"><img src="<?php @web ?>/images/ng7.jpg" alt=" " /></a>
             </div>
             <div class="col-md-3 img-w3-agile footer-middle-wthree">
-                <a href="single.html"><img src="images/ng8.jpg" alt=" " /></a>
+                <a href="single.html"><img src="<?php @web ?>/images/ng8.jpg" alt=" " /></a>
             </div>
             <div class="clearfix"></div>
         </div>

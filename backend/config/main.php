@@ -1,4 +1,9 @@
 <?php
+use \yii\web\Request;
+
+$request = new Request();//  khai báo một request mới
+$baseUrl = str_replace('/backend/web', '', $request->baseUrl); // thay thế /frontend/web trên $request->baseUrl bằng ''
+$rulesUrl = require __DIR__ . '/../../common/config/rules.php';
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
     require __DIR__ . '/../../common/config/params-local.php',
@@ -15,6 +20,7 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
+            'baseUrl' => '/backend',
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -37,14 +43,20 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
+//        'urlManager' => [
+//            'baseUrl' => $baseUrl,
+//            'enablePrettyUrl' => true,
+//            'showScriptName' => false,
+//           'rules' => $rulesUrl,
+//        ],
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+
             ],
         ],
-        */
     ],
     'params' => $params,
 ];

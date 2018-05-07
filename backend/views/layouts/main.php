@@ -61,6 +61,7 @@ AppAsset::register($this);
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
+        <?php echo Html::a('Games',['/games'],['btn btn-infor']) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
     </div>
