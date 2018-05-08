@@ -18,9 +18,14 @@ class m180508_022648_create_members_table extends Migration
             'email' => $this->string()->notNull(),
             'password' => $this->string()->notNull(),
             'avatar' => $this->string()->notNull(),
+            'auth_key' => $this->string(32)->notNull(),
+            'password_hash' => $this->string()->notNull(),
+            'password_reset_token' => $this->string()->unique(),
+            'created_at' => $this->integer()->notNull(),
+            'updated_at' => $this->integer()->notNull(),
             'create_at' => $this->integer()->notNull(),
             'update_at' => $this->integer()->notNull(),
-            'status' => $this->integer()->notNull()->defaultValue(1)->comment('0- khóa / 1 Active')
+            'status' => $this->integer()->notNull()->defaultValue(10)->comment('0- khóa / 10 Active')
         ]);
     }
 

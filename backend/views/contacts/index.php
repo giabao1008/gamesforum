@@ -24,13 +24,21 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
             'name',
             'email:email',
             'subject',
-            'is_read',
 
+            ['attribute' =>  'is_read',
+                'headerOptions' => [
+                    'style' => 'width: 150px; text-align: center'
+                ],
+                'contentOptions' => [
+                    'style' => 'width: 150px; text-align: center'],
+                'content' => function ($model) {
+                    if ($model->is_read == 0) return '<span class="label label-default"> Chưa đọc </span>';
+                    else  return '<span class="label label-success"> Đã đọc </span>';
+                }
+            ],
             ['class' => 'yii\grid\ActionColumn',
                 'template'=> '{view}'
 
