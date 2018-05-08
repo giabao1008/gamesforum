@@ -12,6 +12,7 @@ $params = array_merge(
 );
 
 return [
+    'timeZone' => 'Asia/Ho_Chi_Minh',
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
@@ -43,12 +44,10 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-//        'urlManager' => [
-//            'baseUrl' => $baseUrl,
-//            'enablePrettyUrl' => true,
-//            'showScriptName' => false,
-//           'rules' => $rulesUrl,
-//        ],
+        'formatter' => [
+            'dateFormat' => 'php:d-m-Y',
+            'datetimeFormat' => 'php: H:i:s d-m-Y',
+        ],
         'assetManager' => [
             'bundles' => [
                 'yii\web\JqueryAsset' => [

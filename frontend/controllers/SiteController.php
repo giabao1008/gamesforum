@@ -12,6 +12,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use console\models\Contacts;
 
 /**
  * Site controller
@@ -117,15 +118,22 @@ class SiteController extends Controller
      */
     public function actionContact()
     {
+
         $model = new ContactForm();
+        $contacts = new Contacts();
         if ($model->load(Yii::$app->request->post())) {
             $data_post = Yii::$app->request->post();
+
             if ($model->sendEmail(Yii::$app->params['adminEmail'])  ) {
                 Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
-                $model->name =$data_post['ContactForm']['name'];
-                $model->email =$data_post['ContactForm']['email'];
-                $model->subject =$data_post['ContactForm']['subject'];
-                $model->body = $data_post['ContactForm']['body'];
+                $contacts->name =$data_post['ContactForm']['name'];
+                $contacts->email =$data_post['ContactForm']['email'];
+                $contacts->subject =$data_post['ContactForm']['subject'];
+                $contacts->body =$data_post['ContactForm']['body'];
+                $contacts->send_at = time() ;
+
+               // var_dump($contacts); die();
+                $contacts->save();
             } else {
                 Yii::$app->session->setFlash('error', 'There was an error sending your message.');
             }

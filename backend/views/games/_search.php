@@ -15,11 +15,21 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'name')->textInput(['class'=>'form-control']) ?>
+    <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'author') ?>
+    <?= $form->field($model, 'game_type') ?>
 
-    <?php  echo $form->field($model, 'require') ?>
+    <?= $form->field($model, 'name') ?>
+
+    <?= $form->field($model, 'logo') ?>
+
+    <?= $form->field($model, 'description') ?>
+
+    <?php // echo $form->field($model, 'author') ?>
+
+    <?php // echo $form->field($model, 'require') ?>
+
+    <?php // echo $form->field($model, 'views_count') ?>
 
     <?php // echo $form->field($model, 'is_Hot') ?>
 
@@ -29,7 +39,7 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'status') ?>
 
-    <?php // echo $form->field($model, 'admin') ?>
+    <?php // echo $form->field($model, 'create_by') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

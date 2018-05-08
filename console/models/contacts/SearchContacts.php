@@ -1,16 +1,16 @@
 <?php
 
-namespace console\models;
+namespace console\models\contacts;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use console\models\Games;
+use console\models\contacts\Contacts;
 
 /**
- * SearchGames represents the model behind the search form of `console\models\Games`.
+ * SearchContacts represents the model behind the search form of `console\models\contacts\Contacts`.
  */
-class SearchGames extends Games
+class SearchContacts extends Contacts
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class SearchGames extends Games
     public function rules()
     {
         return [
-            [['id', 'game_type', 'views_count', 'is_Hot', 'create_at', 'update_at', 'status'], 'integer'],
-            [['name', 'logo', 'description', 'author', 'require', 'create_by'], 'safe'],
+            [['id', 'send_at', 'is_read'], 'integer'],
+            [['name', 'email', 'subject', 'body'], 'safe'],
         ];
     }
 
@@ -41,12 +41,14 @@ class SearchGames extends Games
      */
     public function search($params)
     {
-        $query = Games::find();
+        $query = Contacts::find();
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'defaultPageSize' => 10, ]
         ]);
 
         $this->load($params);
@@ -60,20 +62,14 @@ class SearchGames extends Games
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'game_type' => $this->game_type,
-            'views_count' => $this->views_count,
-            'is_Hot' => $this->is_Hot,
-            'create_at' => $this->create_at,
-            'update_at' => $this->update_at,
-            'status' => $this->status,
+            'send_at' => $this->send_at,
+            'is_read' => $this->is_read,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'logo', $this->logo])
-            ->andFilterWhere(['like', 'description', $this->description])
-            ->andFilterWhere(['like', 'author', $this->author])
-            ->andFilterWhere(['like', 'require', $this->require])
-            ->andFilterWhere(['like', 'create_by', $this->create_by]);
+            ->andFilterWhere(['like', 'email', $this->email])
+            ->andFilterWhere(['like', 'subject', $this->subject])
+            ->andFilterWhere(['like', 'body', $this->body]);
 
         return $dataProvider;
     }

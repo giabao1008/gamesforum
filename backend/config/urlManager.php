@@ -8,6 +8,8 @@ return [
     'suffix' => '',
     'rules' => [
         'logout.html' => 'site/logout',
-        'games.html' => 'games/index'
+        'games.html' => 'games/index',
+        'banners.html' => 'banners/index',
+        'contacts.html' => 'contacts/index'
     ]
 ];

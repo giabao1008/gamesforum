@@ -1,5 +1,7 @@
 <?php
-    use yii\helpers\Html;
+
+use yii\helpers\Html;
+
 ?>
 <nav class="navbar navbar-inverse" role="navigation">
     <div class="navbar-header">
@@ -15,18 +17,16 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                    <?php  if (Yii::$app->user->isGuest) {
-                        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-                    }  else {
-                        echo ' <a href="#" class="dropdown-toggle" data-toggle="dropdown">'. Yii::$app->user->identity->username .' <b class="caret"></b></a>';
-                         echo ' <ul class="dropdown-menu">
+                <?php if (Yii::$app->user->isGuest) {
+                    $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+                } else {
+                    echo ' <a href="#" class="dropdown-toggle" data-toggle="dropdown">' . Yii::$app->user->identity->username . ' <b class="caret"></b></a>';
+                    echo ' <ul class="dropdown-menu">
                                 <li><a href="#"><i class="fa fa-user"></i> Chỉnh sửa tài khoản</a></li>';
-                        echo '<li>'. Html::a('Đăng xuất',
+                    echo '<li>' . Html::a('Đăng xuất',
                             ['site/logout'],
-                            ['class' => 'logout', 'data-method'=>'post']). '</li>  </ul>';
-                    } ?>
-
-
+                            ['class' => 'logout', 'data-method' => 'post']) . '</li>  </ul>';
+                } ?>
 
 
             </li>

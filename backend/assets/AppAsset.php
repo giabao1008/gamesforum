@@ -10,7 +10,7 @@ use yii\web\AssetBundle;
 class AppAsset extends AssetBundle
 {
     public $basePath = '@webroot';
-    public $baseUrl = 'http://gamesforum.vn';
+    public $baseUrl = 'http://gamesforum.vn/backend/web';
     public $css = [
         'css/admin.css',
         'css/font-awesome.min.css',

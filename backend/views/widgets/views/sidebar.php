@@ -15,32 +15,27 @@
             </li>
             <li class="list-group-item">
                 <a href="product.html">
-                    <i class="fa fa-fire"></i><span>Sản phẩm</span>
+                    <i class="fa fa-fire"></i><span>Loại game</span>
                 </a>
             </li>
             <li class="list-group-item">
-                <a href="type_product.html">
-                    <i class="fa fa-bars"></i> <span>Loại sản phẩm</span>
-                </a>
-            </li>
-            <li class="list-group-item">
-                <a href="contact.html">
+                <a href="contacts.html">
                     <i class="fa fa-envelope-o"></i> <span>Phản hồi<span class="badge pull-right">1</span></span>
                 </a>
             </li>
             <li class="list-group-item">
-                <a href="slider.html">
-                    <i class="fa fa-picture-o"></i> <span>Slider</span>
+                <a href="/backend/banners.html">
+                    <i class="fa fa-picture-o"></i> <span>Banner</span>
                 </a>
             </li>
             <li class="list-group-item">
                 <a href="user.html">
-                    <i class="fa fa-user"></i> <span>Tài khoản</span>
+                    <i class="fa fa-user"></i> <span>Tài khoản thường</span>
                 </a>
             </li>
             <li class="list-group-item">
-                <a href="setting.html">
-                    <i class="fa fa-wrench"></i> <span>Cấu hình</span>
+                <a href="user.html">
+                    <i class="fa fa-user"></i> <span>Tài khoản admin</span>
                 </a>
             </li>
         </ul>

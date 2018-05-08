@@ -1,18 +1,18 @@
 <?php
 
-namespace console\controllers;
+namespace backend\controllers;
 
 use Yii;
-use console\models\Games;
-use console\models\SearchGames;
+use console\models\contacts\Contacts;
+use console\models\contacts\SearchContacts;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * GamesController implements the CRUD actions for Games model.
+ * ContactsController implements the CRUD actions for Contacts model.
  */
-class GamesController extends Controller
+class ContactsController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class GamesController extends Controller
     }
 
     /**
-     * Lists all Games models.
+     * Lists all Contacts models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new SearchGames();
+        $searchModel = new SearchContacts();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class GamesController extends Controller
     }
 
     /**
-     * Displays a single Games model.
+     * Displays a single Contacts model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -58,13 +58,13 @@ class GamesController extends Controller
     }
 
     /**
-     * Creates a new Games model.
+     * Creates a new Contacts model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Games();
+        $model = new Contacts();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -76,7 +76,7 @@ class GamesController extends Controller
     }
 
     /**
-     * Updates an existing Games model.
+     * Updates an existing Contacts model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -96,7 +96,7 @@ class GamesController extends Controller
     }
 
     /**
-     * Deletes an existing Games model.
+     * Deletes an existing Contacts model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -110,15 +110,15 @@ class GamesController extends Controller
     }
 
     /**
-     * Finds the Games model based on its primary key value.
+     * Finds the Contacts model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Games the loaded model
+     * @return Contacts the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Games::findOne($id)) !== null) {
+        if (($model = Contacts::findOne($id)) !== null) {
             return $model;
         }
 

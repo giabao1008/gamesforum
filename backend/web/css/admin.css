@@ -6,6 +6,17 @@
 .main{
     padding-top: 30px;
 }
+.img-small{
+    height: 80px;
+}
+.dropdown-menu{
+    display: block !important;
+    visibility: hidden;
+}
+.dropdown:focus .dropdown-menu,
+.dropdown:hover .dropdown-menu{
+    visibility: visible;
+}
 input#search  {
 padding-right: 70px;
 }
