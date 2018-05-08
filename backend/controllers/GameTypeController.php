@@ -3,16 +3,17 @@
 namespace backend\controllers;
 
 use Yii;
-use console\models\games\Games;
-use console\models\games\SearchGames;
+use console\models\games\GameType;
+use console\models\games\SearchGameType;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
- * GamesController implements the CRUD actions for Games model.
+ * GameTypeController implements the CRUD actions for GameType model.
  */
-class GamesController extends Controller
+class GameTypeController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +31,12 @@ class GamesController extends Controller
     }
 
     /**
-     * Lists all Games models.
+     * Lists all GameType models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new SearchGames();
+        $searchModel = new SearchGameType();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +46,7 @@ class GamesController extends Controller
     }
 
     /**
-     * Displays a single Games model.
+     * Displays a single GameType model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -58,13 +59,14 @@ class GamesController extends Controller
     }
 
     /**
-     * Creates a new Games model.
+     * Creates a new GameType model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Games();
+        $model = new GameType();
+
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $upload = UploadedFile::getInstance($model, 'file');
 
@@ -91,7 +93,7 @@ class GamesController extends Controller
     }
 
     /**
-     * Updates an existing Games model.
+     * Updates an existing GameType model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -111,7 +113,7 @@ class GamesController extends Controller
     }
 
     /**
-     * Deletes an existing Games model.
+     * Deletes an existing GameType model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -125,15 +127,15 @@ class GamesController extends Controller
     }
 
     /**
-     * Finds the Games model based on its primary key value.
+     * Finds the GameType model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Games the loaded model
+     * @return GameType the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Games::findOne($id)) !== null) {
+        if (($model = GameType::findOne($id)) !== null) {
             return $model;
         }
 

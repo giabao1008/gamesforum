@@ -17,21 +17,6 @@ use yii\data\Pagination;
 class BannersController extends Controller
 {
     /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
-
-    /**
      * Lists all Banners models.
      * @return mixed
      */
@@ -80,7 +65,7 @@ class BannersController extends Controller
             }
             if ($model->save()) {
                 Yii::$app->session->addFlash('success', 'Bạn đã tạo img thành cmn công');
-                return $this->redirect(['/']);
+                return $this->redirect(['index']);
                // return $this->redirect(['view', 'id' => $model->id]);
             } else {
                 Yii::$app->session->addFlash('danger', 'Tạo thất bại');

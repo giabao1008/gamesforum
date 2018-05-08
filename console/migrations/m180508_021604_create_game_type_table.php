@@ -15,7 +15,8 @@ class m180508_021604_create_game_type_table extends Migration
         $this->createTable('game_type', [
             'id' => $this->primaryKey(),
             'name' => $this->string()->notNull(),
-            'logo' => $this->string()->notNull(),
+            'logo' => $this->string()->notNull()->defaultValue('No Logo'),
+            'type' => $this->string()->notNull(),
         ]);
     }
 

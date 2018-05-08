@@ -1,6 +1,6 @@
 <?php
 
-namespace console\models;
+namespace console\models\games;
 
 use Yii;
 
@@ -10,6 +10,7 @@ use Yii;
  * @property int $id
  * @property string $name
  * @property string $logo
+ * @property string $type
  *
  * @property Games[] $games
  */
@@ -18,6 +19,7 @@ class GameType extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $file;
     public static function tableName()
     {
         return 'game_type';
@@ -29,8 +31,9 @@ class GameType extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'logo'], 'required'],
-            [['name', 'logo'], 'string', 'max' => 255],
+            [['name', 'type'], 'required'],
+            [['name', 'logo', 'type'], 'string', 'max' => 255],
+            [['file'],'file','extensions'=>'jpg,png']
         ];
     }
 
@@ -43,6 +46,7 @@ class GameType extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'logo' => 'Logo',
+            'type' => 'Type',
         ];
     }
 

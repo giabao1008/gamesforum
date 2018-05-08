@@ -1,14 +1,14 @@
 <?php
 
-namespace console\models;
+namespace console\models\games;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use console\models\Games;
+use console\models\games\Games;
 
 /**
- * SearchGames represents the model behind the search form of `console\models\Games`.
+ * SearchGames represents the model behind the search form of `console\models\games\Games`.
  */
 class SearchGames extends Games
 {

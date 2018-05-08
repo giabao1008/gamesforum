@@ -16,7 +16,6 @@ class m180508_022648_create_members_table extends Migration
             'id' => $this->primaryKey(),
             'username' => $this->string()->notNull(),
             'email' => $this->string()->notNull(),
-            'password' => $this->string()->notNull(),
             'avatar' => $this->string()->notNull(),
             'auth_key' => $this->string(32)->notNull(),
             'password_hash' => $this->string()->notNull(),

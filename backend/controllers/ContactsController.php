@@ -12,22 +12,9 @@ use yii\filters\VerbFilter;
 /**
  * ContactsController implements the CRUD actions for Contacts model.
  */
-class ContactsController extends Controller
+class ContactsController extends AppController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
+
 
     /**
      * Lists all Contacts models.

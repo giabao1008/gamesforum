@@ -4,13 +4,15 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model console\models\Games */
+/* @var $model console\models\games\Games */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
 <div class="games-form">
 
     <?php $form = ActiveForm::begin(); ?>
+
+    <?= $form->field($model, 'game_type')->textInput() ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
@@ -24,11 +26,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'views_count')->textInput() ?>
 
+    <?= $form->field($model, 'is_Hot')->textInput() ?>
+
     <?= $form->field($model, 'create_at')->textInput() ?>
 
     <?= $form->field($model, 'update_at')->textInput() ?>
 
     <?= $form->field($model, 'status')->textInput() ?>
+
+    <?= $form->field($model, 'create_by')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

@@ -10,6 +10,7 @@ return [
         'logout.html' => 'site/logout',
         'games.html' => 'games/index',
         'banners.html' => 'banners/index',
-        'contacts.html' => 'contacts/index'
+        'contacts.html' => 'contacts/index',
+        'game-type.html' => '/game-type/index'
     ]
 ];

@@ -14,7 +14,7 @@
                 </a>
             </li>
             <li class="list-group-item">
-                <a href="product.html">
+                <a href="/backend/game-type.html">
                     <i class="fa fa-fire"></i><span>Loại game</span>
                 </a>
             </li>

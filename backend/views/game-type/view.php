@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model console\models\games\Games */
+/* @var $model console\models\games\GameType */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Games', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Game Types', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="games-view">
+<div class="game-type-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,18 +29,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'game_type',
             'name',
             'logo',
-            'description',
-            'author',
-            'require',
-            'views_count',
-            'is_Hot',
-            'create_at',
-            'update_at',
-            'status',
-            'create_by',
+            'type',
         ],
     ]) ?>
 
