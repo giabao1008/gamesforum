@@ -30,12 +30,18 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 <?php include 'header.php' ?>
 <div class="main">
-    <div class="col-xs-2">
-        <?= SidebarWiget::widget() ?>
-    </div>
-    <div class="col-xs-10">
-        <?php echo $content; ?>
-    </div>
+    <?php if (Yii::$app->requestedRoute != 'site/login') { ?>
+        <div class="col-xs-2">
+            <?= SidebarWiget::widget(); ?>
+        </div>
+        <div class="col-xs-10">
+            <?php echo $content; ?>
+        </div>
+    <?php } else { ?>
+        <div class="col-md-12">
+            <?php echo $content; ?>
+        </div>
+    <?php } ?>
 </div>
 <?php $this->endBody() ?>
 </body>
