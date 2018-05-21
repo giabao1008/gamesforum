@@ -1,4 +1,7 @@
-<?php if (Yii::$app->requestedRoute === 'site/index' || Yii::$app->requestedRoute === '' ) { ?>
+<?php use console\models\banners\Banners;
+$banners = Banners::find()->all();
+
+if (Yii::$app->requestedRoute === 'site/index' || Yii::$app->requestedRoute === '' ) { ?>
     <div class="header">
         <!-- Navbar -->
         <nav class="navbar navbar-default">
@@ -33,15 +36,13 @@
     <!-- Slider -->
     <div class="slider">
         <ul class="rslides" id="slider">
+            <?php
+                foreach ( $banners as $banner){
+            ?>
             <li>
-                <img src="<?php @web ?>/images/banner3.jpg" alt=""/>
+                <img src="http://gamesforum.vn/backend/web/uploads/<?= $banner->image; ?>" alt=""/>
             </li>
-            <li>
-                <img src="<?php @web ?>/images/banner2.jpg" alt=""/>
-            </li>
-            <li>
-                <img src="<?php @web ?>/images/banner1.jpg" alt=""/>
-            </li>
+            <?php } ?>
         </ul>
     </div>
     <!-- //Slider -->

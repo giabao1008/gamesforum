@@ -42,28 +42,6 @@ class UserController extends AppController
             'model' => $this->findModel($id),
         ]);
     }
-
-    /**
-     * Creates a new User model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    public function actionCreate()
-    {
-        $model = new User();
-        if ($model->load(Yii::$app->request->post())) {
-            $post = Yii::$app->request->post();
-             var_dump($model); die();
-            $model->status  = 10;
-            var_dump($model->save());die;
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
-
-        return $this->render('create', [
-            'model' => $model,
-        ]);
-    }
-
     /**
      * Updates an existing User model.
      * If update is successful, the browser will be redirected to the 'view' page.
@@ -76,7 +54,7 @@ class UserController extends AppController
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect('index');
         }
 
         return $this->render('update', [

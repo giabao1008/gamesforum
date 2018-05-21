@@ -60,7 +60,7 @@ class BannersController extends AppController
             $upload = UploadedFile::getInstance($model, 'file');
 
             if ($upload) {
-                $upload->saveAs('../uploads/' . $upload->name);
+                $upload->saveAs('../web/uploads/' . $upload->name);
                 $model->image = $upload->name;
             }
             if ($model->save()) {

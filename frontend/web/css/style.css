@@ -1109,10 +1109,10 @@ p.left {
     float: left;
     font-size: 14px;
     color: #000;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     margin-right: 5%;
-    width: 35%;
     font-weight: 600;
+	display: inline-block;
 }
 p.right {
     font-size: 14px;
@@ -1674,7 +1674,7 @@ color:rgb(2, 24, 136) !important;
 		top: 54px;
 		right:0;
 	}
-	#small-dialog, #small-dialog2, #small-dialog3, #small-dialog4, #small-dialog5, #small-dialog6, #small-dialog7, #small-dialog8 {
+	[id^='small-dialog-'] {
 		max-width: 70%
 	}
 
@@ -1803,7 +1803,7 @@ color:rgb(2, 24, 136) !important;
 		width:50%;
 		float:left;
 	}
-	#small-dialog, #small-dialog2, #small-dialog3, #small-dialog4, #small-dialog5, #small-dialog6, #small-dialog7, #small-dialog8 {
+	[id^='small-dialog-'] {
 		max-width: 72%;
 	}
 	.about-grid-left-agileits-w3layouts,.about-grid-right-w3-agile {
@@ -1961,7 +1961,7 @@ color:rgb(2, 24, 136) !important;
 	}
 }
 @media screen and (max-width: 900px){
-	#small-dialog, #small-dialog2, #small-dialog3, #small-dialog4, #small-dialog5, #small-dialog6, #small-dialog7, #small-dialog8 {
+	[id^='small-dialog-']{
 		max-width: 80%;
 	}
 	.events-text-w3-agile {
@@ -1972,7 +1972,7 @@ color:rgb(2, 24, 136) !important;
 	}
 }
 @media screen and (max-width: 800px){
-	#small-dialog, #small-dialog2, #small-dialog3, #small-dialog4, #small-dialog5, #small-dialog6, #small-dialog7, #small-dialog8 {
+	[id^='small-dialog-'] {
 		max-width: 90%;
 	}
 	.collection-text img {
@@ -2107,7 +2107,7 @@ color:rgb(2, 24, 136) !important;
 	.w3ls-right {
 		padding-left: 0;
 	}
-	#small-dialog, #small-dialog2, #small-dialog3, #small-dialog4, #small-dialog5, #small-dialog6, #small-dialog7, #small-dialog8 {
+	[id^='small-dialog-'] {
 		padding: 25px 5px;
 	}
 	.span1 {
@@ -2332,7 +2332,7 @@ color:rgb(2, 24, 136) !important;
 		padding: 83px 0;
 		width: 94.5%;
 	}
-	#small-dialog, #small-dialog2, #small-dialog3, #small-dialog4, #small-dialog5, #small-dialog6, #small-dialog7, #small-dialog8 {
+	[id^='small-dialog-'] {
 		max-width: 98%;
 	}
 	.mfp-close {
@@ -2395,7 +2395,7 @@ color:rgb(2, 24, 136) !important;
 		float: left;
 		width: 50%;
 	}
-	#small-dialog, #small-dialog2, #small-dialog3, #small-dialog4, #small-dialog5, #small-dialog6, #small-dialog7, #small-dialog8 {
+	[id^='small-dialog-'] {
 		max-width: 75%;
 		margin-top:100px;
 	}
@@ -2638,7 +2638,7 @@ color:rgb(2, 24, 136) !important;
 		line-height: 27px;
 		font-size: 14px;
 	}
-	#small-dialog, #small-dialog2, #small-dialog3, #small-dialog4, #small-dialog5, #small-dialog6, #small-dialog7, #small-dialog8 {
+	[id^='small-dialog-'] {
 		max-width: 85%;
 	}
 }
@@ -2690,7 +2690,7 @@ color:rgb(2, 24, 136) !important;
 	.trend-w3layouts h4, .services-agileits-w3layouts h4 {
 		font-size: 16px;
 	}
-	#small-dialog, #small-dialog2, #small-dialog3, #small-dialog4, #small-dialog5, #small-dialog6, #small-dialog7, #small-dialog8 {
+	[id^='small-dialog-'] {
 		max-width: 96%;
 	}
 	.about-grid-left-agileits-w3layouts, .about-grid-right-w3-agile {

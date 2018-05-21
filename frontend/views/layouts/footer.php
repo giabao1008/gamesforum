@@ -1,4 +1,8 @@
-
+<?php
+use console\models\games\Games;
+$gameNews = Games::find()->orderBy(['create_at' => SORT_DESC ])->limit(8)->all();
+ $url = 'http://gamesforum.vn/backend/web/uploads' ;
+?>
 <!-- footer -->
 <div class="footer">
     <div class="container">
@@ -23,30 +27,13 @@
         </div>
         <div class="col-md-5 footer-middle-w3">
             <h4>Latest Games</h4>
-            <div class="col-md-3 img-w3-agile">
-                <a href="single.html"><img src="<?php @web ?>/images/ng1.jpg" alt=" " /></a>
-            </div>
-            <div class="col-md-3 img-w3-agile">
-                <a href="single.html"><img src="<?php @web ?>/images/ng2.jpg" alt=" " /></a>
-            </div>
-            <div class="col-md-3 img-w3-agile">
-                <a href="single.html"><img src="<?php @web ?>/images/ng3.jpg" alt=" " /></a>
-            </div>
-            <div class="col-md-3 img-w3-agile">
-                <a href="single.html"><img src="<?php @web ?>/images/ng4.jpg" alt=" " /></a>
-            </div>
-            <div class="col-md-3 img-w3-agile footer-middle-wthree">
-                <a href="single.html"><img src="<?php @web ?>/images/ng5.jpg" alt=" " /></a>
-            </div>
-            <div class="col-md-3 img-w3-agile footer-middle-wthree">
-                <a href="single.html"><img src="<?php @web ?>/images/ng6.jpg" alt=" " /></a>
-            </div>
-            <div class="col-md-3 img-w3-agile footer-middle-wthree">
-                <a href="single.html"><img src="<?php @web ?>/images/ng7.jpg" alt=" " /></a>
-            </div>
-            <div class="col-md-3 img-w3-agile footer-middle-wthree">
-                <a href="single.html"><img src="<?php @web ?>/images/ng8.jpg" alt=" " /></a>
-            </div>
+            <?php
+                foreach ($gameNews as $gameNew) {
+            ?>
+             <div class="col-md-3 img-w3-agile">
+                   <a href="single.html"><img src="<?= $url ?>/<?= $gameNew->logo ?>" alt=" " /></a>
+              </div>
+            <?php  }?>
             <div class="clearfix"></div>
         </div>
         <div class="col-md-4 footer-right-w3">

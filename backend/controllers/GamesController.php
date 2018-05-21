@@ -24,7 +24,6 @@ class GamesController extends AppController
     {
         $searchModel = new SearchGames();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -52,12 +51,15 @@ class GamesController extends AppController
     public function actionCreate()
     {
         $model = new Games();
-        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+        if ($model->load(Yii::$app->request->post())) {
             $upload = UploadedFile::getInstance($model, 'file');
 
             if ($upload) {
                 $upload->saveAs('uploads/' . $upload->name);
                 $model->logo = $upload->name;
+                $model->create_at = time();
+                $model->update_at= time();
+                $model->create_by = Yii::$app->user->identity->username;
             }
             if ($model->save()) {
                 Yii::$app->session->addFlash('success', 'Bạn đã tạo img thành cmn công');

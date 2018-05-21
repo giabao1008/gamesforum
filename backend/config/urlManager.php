@@ -13,5 +13,6 @@ return [
         'contacts.html' => 'contacts/index',
         'game-type.html' => '/game-type/index',
         'users.html'=> '/user/index',
+        'articles.html'=> '/articles/index',
     ]
 ];

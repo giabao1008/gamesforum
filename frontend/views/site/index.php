@@ -91,8 +91,7 @@ $this->title = 'Games Forum - Game zone for Gamer';
 <div class="new-w3-agile">
     <div class="container">
         <h3>Game Mới</h3>
-       
-        <?php if ($gameNews) { ?>
+        <?php if ($gameNews && $gameNews != '') { ?>
         <?php foreach ( $gameNews as $itemNews){  ?>
         <div class="col-md-3 new-grid-w3l view view-eighth">
             <img src="<?=  $defaultUrl.$itemNews->logo  ?>" alt=" " />
@@ -102,7 +101,7 @@ $this->title = 'Games Forum - Game zone for Gamer';
             </div>
         </div>
             <?php }?>
-        <?php } echo '<div class="text-center alert-danger"> Không có game nào mới </div>'  ?>
+        <?php }?>
         <div class="clearfix"></div>
     </div>
 </div>

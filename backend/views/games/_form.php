@@ -24,23 +24,32 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'author')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'require')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'require')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'views_count')->textInput() ?>
+    <?= $form->field($model, 'is_Hot')->dropDownList(
+        [
+            0=> 'Không',
+            1=> 'Hot'
+        ]
+        ,[
+            'prompt' => 'Game Hot ?'
+        ]
+    ) ?>
 
-    <?= $form->field($model, 'is_Hot')->textInput() ?>
+    <?= $form->field($model, 'status')->dropDownList(
+        [
+            0=> 'Ẩn',
+            1=> 'Kích hoạt'
+        ]
+        ,[
+            'prompt' => 'Trạng thái'
+        ]
+    ) ?>
 
-    <?= $form->field($model, 'create_at')->textInput() ?>
-
-    <?= $form->field($model, 'update_at')->textInput() ?>
-
-    <?= $form->field($model, 'status')->textInput() ?>
-
-    <?= $form->field($model, 'create_by')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

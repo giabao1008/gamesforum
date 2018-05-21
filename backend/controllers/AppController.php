@@ -22,6 +22,7 @@ class AppController extends \yii\web\Controller
                     [
                         'actions' => ['login', 'error'],
                         'allow' => true,
+                       // 'roles' => ['?'],
                     ],
                     [
                         'actions' => ['signup'],
@@ -29,7 +30,6 @@ class AppController extends \yii\web\Controller
                         'roles' => ['?'],
                     ],
                     [
-                        //'actions' => ['logout', 'index'],
                         'allow' => true,
                         'roles' => ['@'],
                         'matchCallback' => function($rule,$action){
@@ -38,12 +38,23 @@ class AppController extends \yii\web\Controller
                             }
                         }
                     ],
+                    [
+                      'actions' => ['index'],
+                        'roles' => ['admin'],
+                    ],
+                    [
+                        'actions' => ['logout'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+
                 ],
             ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'logout' => ['post'],
+                    'roles' => ['@'],
                 ],
             ],
         ];

@@ -80,4 +80,5 @@ class Games extends \yii\db\ActiveRecord
     {
         return $this->hasOne(GameType::className(), ['id' => 'game_type']);
     }
+
 }

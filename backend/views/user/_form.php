@@ -15,6 +15,15 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'username')->textInput() ?>
     <?= $form->field($model, 'password_hash')->passwordInput() ?>
     <?= $form->field($model, 'email')->textInput() ?>
+    <?= $form->field($model, 'status')->dropDownList(
+            [
+                    0 => 'Khóa',
+                10 => 'Kích hoạt'
+            ],
+            [
+                    'prompt' => 'Trạng thái Người dùng'
+            ]
+    ) ?>
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>

@@ -25,17 +25,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
 //            ['class' => 'yii\grid\SerialColumn'],
-            ['attribute' => 'id',
-                'headerOptions' => [
-                    'style' => 'width: 150px; text-align: center'
-                ],
-            ],
+
             [
                 'attribute' => 'image',
                 'format' => 'raw',
                 'contentOptions' => [' style ' => 'height: 80px'],
                 'value' => function($model){
-                    return '<img class="img-small" src="http://gamesforum.vn/backend/uploads/'.$model->image.'">';
+                    return '<img class="img-small" src="http://gamesforum.vn/backend/web/uploads/'.$model->image.'">';
                 }
             ],
             ['attribute' => 'status',

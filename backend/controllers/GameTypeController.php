@@ -57,7 +57,7 @@ class GameTypeController extends AppController
             $upload = UploadedFile::getInstance($model, 'file');
 
             if ($upload) {
-                $upload->saveAs('../uploads/' . $upload->name);
+                $upload->saveAs('../web/uploads/' . $upload->name);
                 $model->logo = $upload->name;
             }
             if ($model->save()) {
@@ -89,13 +89,29 @@ class GameTypeController extends AppController
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            $upload = UploadedFile::getInstance($model, 'file');
 
-        return $this->render('update', [
-            'model' => $model,
-        ]);
+            if ($upload) {
+                $upload->saveAs('../web/uploads/' . $upload->name);
+                $model->logo = $upload->name;
+            }
+            if ($model->save()) {
+                Yii::$app->session->addFlash('success', 'Bạn đã tạo img thành cmn công');
+                return $this->redirect(['index']);
+                // return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                Yii::$app->session->addFlash('danger', 'Tạo thất bại');
+                return $this->render('create', [
+                    'model' => $model
+                ]);
+            }
+        } else {
+
+            return $this->render('create', [
+                'model' => $model
+            ]);
+        }
     }
 
     /**

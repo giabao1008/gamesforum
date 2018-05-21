@@ -20,10 +20,8 @@ class AppAsset extends AssetBundle
         'js/html5shiv.min.js',
         'js/intro.min.js',
         'js/respond.min.js',
-        'js/jquery.backstretch.js',
-        'js/jquery.backstretch.min.js',
-        'js/placeholder.js',
-        'js/scripts.js'
+        'js/main.js',
+        'js/tinymce/tinymce.min.js',
 
     ];
     public $depends = [

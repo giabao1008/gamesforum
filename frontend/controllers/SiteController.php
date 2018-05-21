@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use backend\controllers\AppController;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -15,42 +16,12 @@ use frontend\models\ContactForm;
 use console\models\contacts\Contacts;
 use console\models\games\Games;
 use console\models\games\GameType;
+use console\models\banners\Banners;
 /**
  * Site controller
  */
 class SiteController extends Controller
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
-                'rules' => [
-                    [
-                        'actions' => ['signup'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
-    }
-
     /**
      * {@inheritdoc}
      */
@@ -76,9 +47,11 @@ class SiteController extends Controller
     {
         $GameType =  GameType::find()->all();
         $gameNews = Games::find()->orderBy(['create_at' => SORT_DESC ])->limit(8)->all();
+        $banner = Banners::find()->all();
         return $this->render('index',[
             'gameNews' => $gameNews,
             'GameType' => $GameType,
+            'banner' => $banner,
         ]);
     }
 
@@ -230,7 +203,10 @@ class SiteController extends Controller
         ]);
     }
     public function actionGames(){
-        return $this->render('games');
+        $games = Games::find()->all();
+        return $this->render('games',[
+            'games'=> $games,
+        ]);
     }
     public function actionNews(){
         return $this->render('news');

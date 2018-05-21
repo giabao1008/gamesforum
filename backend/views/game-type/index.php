@@ -27,8 +27,22 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'name',
-            'logo:image',
-            'type',
+
+            [
+                'attribute' => 'logo',
+                'format' => 'raw',
+                'contentOptions' => [' style ' => 'height: 80px'],
+                'value' => function($model){
+                    return '<img class="img-small" src="http://gamesforum.vn/backend/web/uploads/'.$model->logo.'">';
+                }
+            ],
+            [
+                'attribute' => 'type',
+                'content' => function ($model) {
+                    if ($model->type == 1) return '<span class="label label-success"> Game Online </span>'; else
+                        if ($model->type == 0) return '<span class="label label-default"> Game Offline </span>';
+                }
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
