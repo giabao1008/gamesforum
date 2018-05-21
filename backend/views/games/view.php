@@ -32,6 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'game_type',
             'name',
             'logo',
+            'slug',
             'description',
             'author',
             'require',

@@ -28,8 +28,16 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'game_type',
             'name',
-            'logo',
-            'description',
+            [
+                'attribute' => 'logo',
+                'format' => 'raw',
+                'contentOptions' => [' style ' => 'height: 80px'],
+                'value' => function($model){
+                    return '<img class="img-small" src="http://gamesforum.vn/backend/web/uploads/'.$model->logo.'">';
+                }
+            ],
+            'slug',
+            //'description',
             //'author',
             //'require',
             //'views_count',

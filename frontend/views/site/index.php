@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-
+$defaultUrl = 'http://gamesforum.vn/backend/web/uploads/';
 $this->title = 'Games Forum - Game zone for Gamer';
 ?>
 
@@ -9,32 +9,18 @@ $this->title = 'Games Forum - Game zone for Gamer';
 <div class="trend-w3layouts">
     <div class="container">
         <h2>Trending Games</h2>
+        <?php if ($GameType) { ?>
         <ul id="flexiselDemo1">
+        <?php foreach ($GameType as $item){  ?>
             <li>
                 <div class="trend-grid">
-                    <h4>Racing Games</h4>
-                    <img src="images/tg1.jpg" alt=" " class="img-responsive" />
+                    <h4><?=$item->name ?></h4>
+                    <img src="<?=$defaultUrl.$item->logo?>" alt=" " class="img-responsive" />
                 </div>
             </li>
-            <li>
-                <div class="trend-grid">
-                    <h4>3D Games</h4>
-                    <img src="images/tg2.jpg" alt=" " class="img-responsive" />
-                </div>
-            </li>
-            <li>
-                <div class="trend-grid">
-                    <h4>Action Games</h4>
-                    <img src="images/tg3.jpg" alt=" " class="img-responsive" />
-                </div>
-            </li>
-            <li>
-                <div class="trend-grid">
-                    <h4>Toy Games</h4>
-                    <img src="images/tg4.jpg" alt=" " class="img-responsive" />
-                </div>
-            </li>
+            <?php  } ?>
         </ul>
+    <?php } ?>
         <script type="text/javascript">
             $(window).on('load', function(){
                 $("#flexiselDemo1").flexisel({
@@ -104,63 +90,19 @@ $this->title = 'Games Forum - Game zone for Gamer';
 <!-- new games -->
 <div class="new-w3-agile">
     <div class="container">
-        <h3>New Games</h3>
+        <h3>Game Mới</h3>
+       
+        <?php if ($gameNews) { ?>
+        <?php foreach ( $gameNews as $itemNews){  ?>
         <div class="col-md-3 new-grid-w3l view view-eighth">
-            <img src="images/ng1.jpg" alt=" " />
+            <img src="<?=  $defaultUrl.$itemNews->logo  ?>" alt=" " />
             <div class="mask">
                 <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
+                <p>To read more about this</p>
             </div>
         </div>
-        <div class="col-md-3 new-grid-w3l view view-eighth">
-            <img src="images/ng2.jpg" alt=" " />
-            <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
-            </div>
-        </div>
-        <div class="col-md-3 new-grid-w3l view view-eighth">
-            <img src="images/ng3.jpg" alt=" " />
-            <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
-            </div>
-        </div>
-        <div class="col-md-3 new-grid-w3l view view-eighth">
-            <img src="images/ng4.jpg" alt=" " />
-            <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
-            </div>
-        </div>
-        <div class="col-md-3 new-grid-agile view view-eighth">
-            <img src="images/ng5.jpg" alt=" " />
-            <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
-            </div>
-        </div>
-        <div class="col-md-3 new-grid-agile view view-eighth">
-            <img src="images/ng6.jpg" alt=" " />
-            <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
-            </div>
-        </div>
-        <div class="col-md-3 new-grid-agile view view-eighth">
-            <img src="images/ng7.jpg" alt=" " />
-            <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
-            </div>
-        </div>
-        <div class="col-md-3 new-grid-agile view view-eighth">
-            <img src="images/ng8.jpg" alt=" " />
-            <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
-            </div>
-        </div>
+            <?php }?>
+        <?php } echo '<div class="text-center alert-danger"> Không có game nào mới </div>'  ?>
         <div class="clearfix"></div>
     </div>
 </div>

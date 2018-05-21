@@ -30,6 +30,7 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * {@inheritdoc}
      */
+    public $pass;
     public static function tableName()
     {
         return '{{%user}}';
@@ -185,5 +186,15 @@ class User extends ActiveRecord implements IdentityInterface
     public function removePasswordResetToken()
     {
         $this->password_reset_token = null;
+    }
+    public function beforeSave($insert)
+    {
+        if(parent::beforeSave($insert)){
+            if($insert){
+                $this->setPassword($this->password_hash);
+            }
+            return true;
+        }
+        return false;
     }
 }

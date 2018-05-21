@@ -13,7 +13,8 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use console\models\contacts\Contacts;
-
+use console\models\games\Games;
+use console\models\games\GameType;
 /**
  * Site controller
  */
@@ -73,7 +74,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $GameType =  GameType::find()->all();
+        $gameNews = Games::find()->orderBy(['create_at' => SORT_DESC ])->limit(8)->all();
+        return $this->render('index',[
+            'gameNews' => $gameNews,
+            'GameType' => $GameType,
+        ]);
     }
 
     /**

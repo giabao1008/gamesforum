@@ -13,22 +13,8 @@ use yii\web\UploadedFile;
 /**
  * GameTypeController implements the CRUD actions for GameType model.
  */
-class GameTypeController extends Controller
+class GameTypeController extends AppController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Lists all GameType models.
@@ -71,7 +57,7 @@ class GameTypeController extends Controller
             $upload = UploadedFile::getInstance($model, 'file');
 
             if ($upload) {
-                $upload->saveAs('uploads/' . $upload->name);
+                $upload->saveAs('../uploads/' . $upload->name);
                 $model->logo = $upload->name;
             }
             if ($model->save()) {

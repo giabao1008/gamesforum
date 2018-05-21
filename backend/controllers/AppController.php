@@ -24,9 +24,19 @@ class AppController extends \yii\web\Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['signup'],
+                        'allow' => true,
+                        'roles' => ['?'],
+                    ],
+                    [
+                        //'actions' => ['logout', 'index'],
                         'allow' => true,
                         'roles' => ['@'],
+                        'matchCallback' => function($rule,$action){
+                            if(Yii::$app->user->can('admin')){
+                                return true;
+                            }
+                        }
                     ],
                 ],
             ],

@@ -11,6 +11,7 @@ return [
         'games.html' => 'games/index',
         'banners.html' => 'banners/index',
         'contacts.html' => 'contacts/index',
-        'game-type.html' => '/game-type/index'
+        'game-type.html' => '/game-type/index',
+        'users.html'=> '/user/index',
     ]
 ];

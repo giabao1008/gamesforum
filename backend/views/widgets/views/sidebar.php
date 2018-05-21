@@ -29,12 +29,12 @@
                 </a>
             </li>
             <li class="list-group-item">
-                <a href="user.html">
+                <a href="users.html">
                     <i class="fa fa-user"></i> <span>Tài khoản thường</span>
                 </a>
             </li>
             <li class="list-group-item">
-                <a href="user.html">
+                <a href="users.html">
                     <i class="fa fa-user"></i> <span>Tài khoản admin</span>
                 </a>
             </li>

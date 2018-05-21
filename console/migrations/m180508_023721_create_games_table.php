@@ -20,6 +20,7 @@ class m180508_023721_create_games_table extends Migration
             'game_type' => $this->integer()->notNull(),
             'name' => $this->string()->notNull()->unique()->defaultValue('undefine'),
             'logo' => $this->string()->notNull()->defaultValue('undefine'),
+            'slug'=>$this->string()->notNull()->defaultValue('undefine'),
             'description' => $this->string()->notNull(),
             'author' => $this->string()->defaultValue('Anonymous'),
             'require' => $this->string()->notNull()->comment('Cấu hình tối thiểu'),

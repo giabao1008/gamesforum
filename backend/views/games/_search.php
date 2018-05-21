@@ -23,7 +23,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'logo') ?>
 
-    <?= $form->field($model, 'description') ?>
+    <?= $form->field($model, 'slug') ?>
+
+    <?php // echo $form->field($model, 'description') ?>
 
     <?php // echo $form->field($model, 'author') ?>
 

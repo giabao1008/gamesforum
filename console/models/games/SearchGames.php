@@ -19,7 +19,7 @@ class SearchGames extends Games
     {
         return [
             [['id', 'game_type', 'views_count', 'is_Hot', 'create_at', 'update_at', 'status'], 'integer'],
-            [['name', 'logo', 'description', 'author', 'require', 'create_by'], 'safe'],
+            [['name', 'logo', 'slug', 'description', 'author', 'require', 'create_by'], 'safe'],
         ];
     }
 
@@ -70,6 +70,7 @@ class SearchGames extends Games
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'logo', $this->logo])
+            ->andFilterWhere(['like', 'slug', $this->slug])
             ->andFilterWhere(['like', 'description', $this->description])
             ->andFilterWhere(['like', 'author', $this->author])
             ->andFilterWhere(['like', 'require', $this->require])

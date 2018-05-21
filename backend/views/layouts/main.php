@@ -28,9 +28,9 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
+<?php if (Yii::$app->requestedRoute != 'site/login') { ?>
 <?php include 'header.php' ?>
 <div class="main">
-    <?php if (Yii::$app->requestedRoute != 'site/login') { ?>
         <div class="col-xs-2">
             <?= SidebarWiget::widget(); ?>
         </div>

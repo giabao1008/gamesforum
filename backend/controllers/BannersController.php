@@ -14,7 +14,7 @@ use yii\data\Pagination;
 /**
  * BannersController implements the CRUD actions for Banners model.
  */
-class BannersController extends Controller
+class BannersController extends AppController
 {
     /**
      * Lists all Banners models.
@@ -60,7 +60,7 @@ class BannersController extends Controller
             $upload = UploadedFile::getInstance($model, 'file');
 
             if ($upload) {
-                $upload->saveAs('uploads/' . $upload->name);
+                $upload->saveAs('../uploads/' . $upload->name);
                 $model->image = $upload->name;
             }
             if ($model->save()) {
