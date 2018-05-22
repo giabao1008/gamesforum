@@ -15,15 +15,11 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
 
     <?= $form->field($model, 'game_type') ?>
 
     <?= $form->field($model, 'name') ?>
 
-    <?= $form->field($model, 'logo') ?>
-
-    <?= $form->field($model, 'slug') ?>
 
     <?php // echo $form->field($model, 'description') ?>
 
