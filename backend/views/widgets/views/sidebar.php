@@ -38,7 +38,7 @@
             </li>
             <li class="list-group-item">
                 <a href="http://gamesforum.vn/backend/users.html">
-                    <i class="fa fa-user"></i> <span>Tài khoản thường</span>
+                    <i class="fa fa-user"></i> <span>Tài khoản </span>
                 </a>
             </li>
         </ul>

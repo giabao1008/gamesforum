@@ -46,8 +46,8 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $GameType =  GameType::find()->all();
-        $gameNews = Games::find()->orderBy(['create_at' => SORT_DESC ])->limit(8)->all();
-        $banner = Banners::find()->all();
+        $gameNews = Games::find()->where(['status'=>1])->orderBy(['create_at' => SORT_DESC ])->limit(8)->all();
+        $banner = Banners::find()->where(['status'=>1])->all();
         return $this->render('index',[
             'gameNews' => $gameNews,
             'GameType' => $GameType,

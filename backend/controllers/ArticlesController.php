@@ -52,8 +52,14 @@ class ArticlesController extends AppController
     {
         $model = new Articles();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) ) {
+            $model->create_at = time();
+            $model->update_at= time();
+            $model->create_by = Yii::$app->user->identity->username;
+            $model->update_by= Yii::$app->user->identity->username;
+            if($model->save()){
             return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('create', [

@@ -23,7 +23,13 @@ if (Yii::$app->requestedRoute === 'site/index' || Yii::$app->requestedRoute === 
                         <li class="hover-effect"><a href="/about-us">About</a></li>
                         <li class="hover-effect"><a href="/games">Games</a></li>
                         <li class="hover-effect"><a href="/news">News</a></li>
-                        <li class="hover-effect"><a href="/contact">Contact</a></li>
+                        <li class="hover-effect"><a href="/contact">Contact us</a></li>
+                        <?php if (Yii::$app->user->isGuest){ ?>
+                            <li class="hover-effect"><a href="/login">Login</a></li>
+                        <?php } else { ?>
+                            <li class="hover-effect"><a href="/logout">Logout ( <?= Yii::$app->user->identity->username ?> )</a></li>
+                        <?php  }?>
+
                     </ul>
                 </div>
 
@@ -78,7 +84,12 @@ if (Yii::$app->requestedRoute === 'site/index' || Yii::$app->requestedRoute === 
                         <li class="hover-effect"><a href="/about-us">About</a></li>
                         <li class="hover-effect"><a href="/games">Games</a></li>
                         <li class="hover-effect"><a href="/news">News</a></li>
-                        <li class="hover-effect"><a href="/contact">Contact</a></li>
+                        <li class="hover-effect"><a href="/contact">Contact us</a></li>
+                        <?php if (Yii::$app->user->isGuest){ ?>
+                            <li class="hover-effect"><a href="/login">Login</a></li>
+                        <?php } else { ?>
+                            <li class="hover-effect"><a href="/logout">Logout ( <?= Yii::$app->user->identity->username ?> )</a></li>
+                        <?php  }?>
                     </ul>
                 </div>
             </div>

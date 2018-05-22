@@ -6,5 +6,8 @@ return [
     'games' => 'site/games',
     'news' => 'site/news',
     'contact' => 'site/contact',
+    'login'=> 'site/login',
+    'logout' => 'site/logout',
+    //'register' => 'site/signup'
 
 ];

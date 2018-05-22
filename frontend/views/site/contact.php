@@ -14,16 +14,14 @@ $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="container">
-    <div class="site-contact">
+    <div class="site-contact col-lg-offset-3 col-md-6">
         <h1><?= Html::encode($this->title) ?></h1>
 
         <p>
-            If you have business inquiries or other questions, please fill out the following form to contact us. Thank
-            you.
+           Bạn có thắc mắc hoặc góp ý với website chúng tôi vui lòng điền vào form sau
         </p>
 
         <div class="row">
-            <div class="col-lg-5">
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
                 <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
@@ -35,11 +33,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                    <?= Html::submitButton('Gửi yêu cầu', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
                 </div>
                 <?php ActiveForm::end(); ?>
-            </div>
         </div>
 
     </div>
 </div>
+<div class="col-md-6"></div>

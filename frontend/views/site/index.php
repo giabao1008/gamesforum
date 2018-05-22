@@ -96,7 +96,7 @@ $this->title = 'Games Forum - Game zone for Gamer';
         <div class="col-md-3 new-grid-w3l view view-eighth">
             <img src="<?=  $defaultUrl.$itemNews->logo  ?>" alt=" " />
             <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
+                <?php echo \yii\helpers\Html::a('<h4> Click here </h4>',['game/view','slug' => $itemNews->slug])  ?>
                 <p>To read more about this</p>
             </div>
         </div>

@@ -12,16 +12,16 @@ $this->params['breadcrumbs'][] = $this->title;
     <!-- about-->
     <div class="about-agileinfo" id="about">
         <div class="container">
-            <h2>About Us</h2>
+            <h2>Về Diễn đàn </h2>
             <div class="about-grids-w3-agileits">
                 <div class="col-md-6 about-grid-left-agileits-w3layouts">
                     <ul>
-                        <li><i>1.</i><a class="link link--kumya" href="single.html"><span data-letters="Qui ratione voluptatem dolores eos qui">Qui ratione voluptatem dolores</span></a></li>
-                        <li><i>2.</i><a class="link link--kumya" href="single.html"><span data-letters="Dolores eos qui ratione voluptatem sequi">Dolores eos qui ratione volu</span></a></li>
-                        <li><i>3.</i><a class="link link--kumya" href="single.html"><span data-letters="Voluptatem quia voluptas sit asper">Voluptatem quia voluptas sit asper</span></a></li>
-                        <li><i>4.</i><a class="link link--kumya" href="single.html"><span data-letters="Consectetur adipiscing elit, incid">Consectetur adipiscing elit, incid</span></a></li>
-                        <li><i>5.</i><a class="link link--kumya" href="single.html"><span data-letters="Quia voluptas sit aspernatur aut odit">Quia voluptas sit aspernatur aut</span></a></li>
-                        <li><i>6.</i><a class="link link--kumya" href="single.html"><span data-letters="Eos qui ratione voluptatem sequi">Eos qui ratione voluptatem sequi</span></a></li>
+                        <li><i>1.</i><a class="link link--kumya" href="single.html"><span data-letters="Nơi chứa thông tin của mọi loại game hot">Nơi chứa thông tin của mọi loại game hot</span></a></li>
+                        <li><i>2.</i><a class="link link--kumya" href="single.html"><span data-letters="Tải ngay không cần đăng nhập">Tải ngay không cần đăng nhập</span></a></li>
+                        <li><i>3.</i><a class="link link--kumya" href="single.html"><span data-letters="Thông tin game cụ thể, rõ ràng">Thông tin game cụ thể, rõ ràng</span></a></li>
+                        <li><i>4.</i><a class="link link--kumya" href="single.html"><span data-letters="Đội ngũ admin chuyên nghiệp">Đội ngũ admin chuyên nghiệp</span></a></li>
+                        <li><i>5.</i><a class="link link--kumya" href="single.html"><span data-letters="Đảm bảo là game 'sạch' -  không chứa virus">Đảm bảo là game "sạch" -  không chứa virus</span></a></li>
+                        <li><i>6.</i><a class="link link--kumya" href="single.html"><span data-letters="Game phê - Chơi 1 lần là mê">Game phê - Chơi 1 lần là mê</span></a></li>
                     </ul>
                 </div>
                 <div class="col-md-6 about-grid-right-w3-agile">

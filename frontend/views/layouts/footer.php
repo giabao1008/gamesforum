@@ -4,6 +4,7 @@ $gameNews = Games::find()->orderBy(['create_at' => SORT_DESC ])->limit(8)->all()
  $url = 'http://gamesforum.vn/backend/web/uploads' ;
 ?>
 <!-- footer -->
+<?php if (Yii::$app->requestedRoute != 'site/login' && Yii::$app->requestedRoute != 'site/signup'  ) { ?>
 <div class="footer">
     <div class="container">
         <div class="col-md-3 footer-left-w3">
@@ -47,3 +48,4 @@ $gameNews = Games::find()->orderBy(['create_at' => SORT_DESC ])->limit(8)->all()
         </div>
     </div>
 </div>
+<?php }?>

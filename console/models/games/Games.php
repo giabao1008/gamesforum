@@ -21,6 +21,7 @@ use Yii;
  * @property int $update_at
  * @property int $status
  * @property string $create_by
+ * @property string $download
  *
  * @property GameType $gameType
  */
@@ -43,11 +44,11 @@ class Games extends \yii\db\ActiveRecord
         return [
             [['game_type', 'description', 'require', 'create_by'], 'required'],
             [['game_type', 'views_count', 'is_Hot', 'create_at', 'update_at', 'status'], 'integer'],
-            [['name', 'logo', 'slug', 'description', 'author', 'require', 'create_by'], 'string', 'max' => 255],
+            [['name', 'logo', 'slug', 'description', 'author', 'require', 'create_by', 'download'], 'string', 'max' => 255],
             [['name'], 'unique'],
             [['game_type'], 'exist', 'skipOnError' => true, 'targetClass' => GameType::className(), 'targetAttribute' => ['game_type' => 'id']],
             [['file'],'file','extensions'=>'jpg,png']
-        ];
+            ];
     }
 
     /**
@@ -57,19 +58,20 @@ class Games extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'game_type' => 'Loại Game',
-            'name' => 'Tên',
-            'logo' => 'Hình ảnh',
-            'slug' => 'Đường dẫn',
-            'description' => 'Mô tả',
-            'author' => 'Tác giả',
-            'require' => 'Cấu hình đề nghị',
-            'views_count' => 'Lượt xem',
-            'is_Hot' => 'HOT',
-            'create_at' => 'Tạo lúc',
-            'update_at' => 'Cập nhật lúc',
-            'status' => 'Trạng thái',
-            'create_by' => 'Tạo bởi',
+            'game_type' => 'Game Type',
+            'name' => 'Name',
+            'logo' => 'Logo',
+            'slug' => 'Slug',
+            'description' => 'Description',
+            'author' => 'Author',
+            'require' => 'Require',
+            'views_count' => 'Views Count',
+            'is_Hot' => 'Is  Hot',
+            'create_at' => 'Create At',
+            'update_at' => 'Update At',
+            'status' => 'Status',
+            'create_by' => 'Create By',
+            'download' => 'Link download',
         ];
     }
 
@@ -80,5 +82,4 @@ class Games extends \yii\db\ActiveRecord
     {
         return $this->hasOne(GameType::className(), ['id' => 'game_type']);
     }
-
 }
