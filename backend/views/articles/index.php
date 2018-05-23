@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel console\models\articles\SearchArticles */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Articles';
+$this->title = 'Bài viết';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="articles-index">
@@ -27,6 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'title',
+            'desc',
             'body:ntext',
             'image',
             'slug',

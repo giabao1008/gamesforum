@@ -8,7 +8,7 @@ use yii\widgets\LinkPager;
 /* @var $searchModel console\models\banners\SearchBanners */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Banners';
+$this->title = 'Home Banners';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="banners-index">

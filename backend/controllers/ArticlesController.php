@@ -8,7 +8,7 @@ use console\models\articles\SearchArticles;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\web\UploadedFile;
 /**
  * ArticlesController implements the CRUD actions for Articles model.
  */
@@ -51,20 +51,33 @@ class ArticlesController extends AppController
     public function actionCreate()
     {
         $model = new Articles();
+        if ($model->load(Yii::$app->request->post())) {
+            $upload = UploadedFile::getInstance($model, 'file');
 
-        if ($model->load(Yii::$app->request->post()) ) {
-            $model->create_at = time();
-            $model->update_at= time();
-            $model->create_by = Yii::$app->user->identity->username;
-            $model->update_by= Yii::$app->user->identity->username;
-            if($model->save()){
-            return $this->redirect(['view', 'id' => $model->id]);
+            if ($upload) {
+                $upload->saveAs('uploads/' . $upload->name);
+                $model->image = $upload->name;
+                $model->create_at = time();
+                $model->update_at= time();
+                $model->create_by = Yii::$app->user->identity->username;
+                $model->update_by = Yii::$app->user->identity->username;
             }
-        }
+            if ($model->save()) {
+                Yii::$app->session->addFlash('success', 'Bạn đã tạo img thành cmn công');
+                return $this->redirect(['index']);
+                // return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                Yii::$app->session->addFlash('danger', 'Tạo thất bại');
+                return $this->render('create', [
+                    'model' => $model
+                ]);
+            }
+        } else {
 
-        return $this->render('create', [
-            'model' => $model,
-        ]);
+            return $this->render('create', [
+                'model' => $model
+            ]);
+        }
     }
 
     /**

@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel console\models\games\SearchGames */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Games';
+$this->title = 'Trò chơi';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="games-index">

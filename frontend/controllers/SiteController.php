@@ -2,6 +2,7 @@
 namespace frontend\controllers;
 
 use backend\controllers\AppController;
+use console\models\articles\Articles;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;

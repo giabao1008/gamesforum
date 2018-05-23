@@ -1,19 +1,4 @@
-<!--<div class="agileits_breadcrumbs">-->
-<!--    <div class="container">-->
-<!--        <div class="agileits_breadcrumbs_left">-->
-<!--            <ul>-->
-<!--                <li><a href="index.html">Home</a><i>|</i></li>-->
-<!--                <li>Single</li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--        <div class="agileits_breadcrumbs_right">-->
-<!--            <h3>Single</h3>-->
-<!--        </div>-->
-<!--        <div class="clearfix"> </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!-- //breadcrumbs -->
-<!-- single -->
+
 <div class="blog">
     <div class="container">
         <div class="col-md-7 wthree_blog_left">

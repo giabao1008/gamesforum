@@ -12,10 +12,8 @@ class ArticleController extends \yii\web\Controller
     public function actionView($slug)
     {
         $art = Articles::findOne(['slug'=> $slug]);
-        $article_Time = Articles::find()->orderBy('create_at')->limit(7);
         return $this->render('article',[
             'art' => $art,
-            'article_Time' => $article_Time,
         ]);
     }
 

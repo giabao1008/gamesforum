@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel console\models\contacts\SearchContacts */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Contacts';
+$this->title = 'Liên hệ gửi về';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="contacts-index">

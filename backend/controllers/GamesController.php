@@ -109,7 +109,7 @@ class GamesController extends AppController
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-
+        Yii::$app->session->addFlash('success', 'Xóa thành công !! ');
         return $this->redirect(['index']);
     }
 

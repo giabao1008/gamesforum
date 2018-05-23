@@ -118,3 +118,12 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+.banner img{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+.banner{
+    border: 1px solid #343434;
+    box-shadow: 1px 1px 3px 1px;
+}
