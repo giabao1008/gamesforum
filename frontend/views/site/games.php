@@ -11,7 +11,7 @@
 
                     <div class="span span1">
                         <p class="left">Loại :</p>
-                        <p class="right"> <?= $item->game_type ?></p>
+                        <p class="right"> <?= $item->gameType->name ?></p>
                         <div class="clearfix"></div>
                     </div>
                     <div class="span span2">

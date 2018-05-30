@@ -123,14 +123,28 @@ a.desc:after {
     width: 100%;
     overflow: hidden;
 }
-.banner{
-    border: 1px solid #343434;
-    box-shadow: 1px 1px 3px 1px;
-}
 .img-w3-agile{
     margin: 15px 0;
 }
 .gallery-grid img{
     display: block;
     width: 100%;
+}
+.banner-small {
+    margin:50px 0;
+    text-align: center;
+}
+.banner-small img{
+    max-width: 768px;
+}
+.banner-small h3{
+    padding: 15px 0;
+}
+.article{
+    padding-bottom: 5px;
+}
+.article:after{
+    content: '';
+    display: table;
+    clear: both;
 }

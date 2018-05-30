@@ -1,5 +1,5 @@
 <?php use console\models\banners\Banners;
-$banners = Banners::find()->all();
+$banners = Banners::find()->where(['status'=>1])->all();
 
 if (Yii::$app->requestedRoute === 'site/index' || Yii::$app->requestedRoute === '' ) { ?>
     <div class="header">
@@ -77,7 +77,7 @@ if (Yii::$app->requestedRoute === 'site/index' || Yii::$app->requestedRoute === 
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="/trang-chu"><h1>Games <img src="<?php @web ?>/images/c1.png" alt=" "/> Forum</h1></a>
+                    <a href="/trang-chu"><h1>Games <img src="<?php @web ?>/images/c1.png" alt=" "/></h1></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
