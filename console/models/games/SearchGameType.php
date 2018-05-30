@@ -47,6 +47,9 @@ class SearchGameType extends GameType
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'defaultPageSize' => 5,
+            ]
         ]);
 
         $this->load($params);

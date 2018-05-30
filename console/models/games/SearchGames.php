@@ -47,6 +47,9 @@ class SearchGames extends Games
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'defaultPageSize' => 5,
+            ]
         ]);
 
         $this->load($params);

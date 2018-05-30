@@ -2,26 +2,31 @@
 
 /* @var $this yii\web\View */
 /* @var $name string */
+/* @var $code int */
 /* @var $message string */
 /* @var $exception Exception */
 
 use yii\helpers\Html;
 
 $this->title = $name;
+$code = $exception->statusCode;
+//var_dump($exception->statusCode);die();
+?>
+<?php
+if($exception->statusCode) {
 ?>
 <div class="site-error">
+    <div class="container">
+        <div class="text-center">
+            <figure>
+                <img src="http://gamesforum.vn/backend/web/uploads/404.png" alt="" style="width:550px">
+            </figure>
+        </div>
+        <div class="alert alert-danger text-center col-md-12">
+            Không tìm thấy trang bạn muốn truy cập vào. Vui lòng quay lại.
+            <div class="clearfix text-right col-md-12"> _-Administrator-_</div>
+        </div>
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <div class="alert alert-danger">
-        <?= nl2br(Html::encode($message)) ?>
     </div>
-
-    <p>
-        The above error occurred while the Web server was processing your request.
-    </p>
-    <p>
-        Please contact us if you think this is a server error. Thank you.
-    </p>
-
 </div>
+<?php }?>

@@ -8,7 +8,7 @@ $this->title = ($game) ? $game->name : 'Not found';
                 <div class="wthree_blog_left_grid_slider">
                     <img src="http://gamesforum.vn/backend/web/uploads/<?=$game->logo?>" alt=" " class="img-responsive" />
                 </div>
-                <h4>Games Zone</h4>
+                <h4>Games Forum</h4>
                 <h3><?= $game->name?></h3>
                 <ul>
                     <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="#"><?= $game->author ?></a><i>|</i></li>

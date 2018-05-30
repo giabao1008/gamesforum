@@ -32,13 +32,13 @@ $gameNews = Games::find()->orderBy(['create_at' => SORT_DESC ])->limit(8)->all()
                 foreach ($gameNews as $gameNew) {
             ?>
              <div class="col-md-3 img-w3-agile">
-                   <a href="single.html"><img src="<?= $url ?>/<?= $gameNew->logo ?>" alt=" " /></a>
+                   <a href="game/view?slug=<?=$gameNew->slug?>"><img src="<?= $url ?>/<?= $gameNew->logo ?>" alt=" " /></a>
               </div>
             <?php  }?>
             <div class="clearfix"></div>
         </div>
         <div class="col-md-4 footer-right-w3">
-            <a href="index.html"><h4>Games <img src="images/f1.png" alt=" " /> Zone</h4></a>
+            <a href="index.html"><h4>Games <img src="images/f1.png" alt=" " /> Forum</h4></a>
             <p>Donec lobortis diam eu auctor porta. Phasellus in elementum tortor, sit amet imperdiet urna pellentesque non risus porta.</p>
             <p class="agileinfo">Suspendisse convallis malesuada libero, non rutrum arcu pellentesque lacinia.</p>
         </div>

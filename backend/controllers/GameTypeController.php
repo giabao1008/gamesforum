@@ -102,13 +102,13 @@ class GameTypeController extends AppController
                 // return $this->redirect(['view', 'id' => $model->id]);
             } else {
                 Yii::$app->session->addFlash('danger', 'Tạo thất bại');
-                return $this->render('create', [
+                return $this->render('update', [
                     'model' => $model
                 ]);
             }
         } else {
 
-            return $this->render('create', [
+            return $this->render('update', [
                 'model' => $model
             ]);
         }

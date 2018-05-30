@@ -3,7 +3,7 @@
         <div id="small-dialog-<?= $item->id ?>" class="mfp-hide book-form">
             <div class="pop-up-content-agileits-w3layouts">
                 <div class="col-md-6 w3ls-left">
-                    <img src="images/g7big.jpg" alt=" " class="img-responsive zoom-img"/>
+                    <img src="http://gamesforum.vn/backend/web/uploads/<?= $item->logo ?>" alt=" " class="img-responsive zoom-img"/>
                 </div>
                 <div class="col-md-6 w3ls-right">
                     <h4><?= $item->name ?></h4>
@@ -33,7 +33,7 @@
 <!-- gallery -->
 <div class="gallery-w3layouts" id="gallery">
     <div class="container">
-        <h2>Exclusive Games</h2>
+        <h2>12 Game mới nhất</h2>
         <div class="gallery-grids">
 
             <?php foreach ($games as $item) { ?>

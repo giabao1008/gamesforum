@@ -8,6 +8,5 @@ return [
     'contact' => 'site/contact',
     'login'=> 'site/login',
     'logout' => 'site/logout',
-    //'register' => 'site/signup'
 
 ];

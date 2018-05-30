@@ -6,7 +6,7 @@
                 <div class="wthree_blog_left_grid_slider">
                     <img src="<?php @web?>/images/s1.jpg" alt=" " class="img-responsive" />
                 </div>
-                <h4>Games Zone</h4>
+                <h4>Games Forum</h4>
                 <h3>facilisis velit vitae gravida imperdiet</h3>
                 <ul>
                     <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="#">Jan Mark</a><i>|</i></li>

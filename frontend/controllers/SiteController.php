@@ -18,6 +18,7 @@ use console\models\contacts\Contacts;
 use console\models\games\Games;
 use console\models\games\GameType;
 use console\models\banners\Banners;
+use console\models\games\SearchGames;
 /**
  * Site controller
  */
@@ -46,10 +47,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $GameType =  GameType::find()->all();
-        $gameNews = Games::find()->where(['status'=>1])->orderBy(['create_at' => SORT_DESC ])->limit(8)->all();
-        $banner = Banners::find()->where(['status'=>1])->all();
-        return $this->render('index',[
+        $GameType = GameType::find()->all();
+        $gameNews = Games::find()->where(['status' => 1])->orderBy(['create_at' => SORT_DESC])->limit(8)->all();
+        $banner = Banners::find()->where(['status' => 1])->all();
+        return $this->render('index', [
             'gameNews' => $gameNews,
             'GameType' => $GameType,
             'banner' => $banner,
@@ -104,15 +105,15 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             $data_post = Yii::$app->request->post();
 
-            if ($model->sendEmail(Yii::$app->params['adminEmail'])  ) {
+            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
                 Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
-                $contacts->name =$data_post['ContactForm']['name'];
-                $contacts->email =$data_post['ContactForm']['email'];
-                $contacts->subject =$data_post['ContactForm']['subject'];
-                $contacts->body =$data_post['ContactForm']['body'];
-                $contacts->send_at = time() ;
+                $contacts->name = $data_post['ContactForm']['name'];
+                $contacts->email = $data_post['ContactForm']['email'];
+                $contacts->subject = $data_post['ContactForm']['subject'];
+                $contacts->body = $data_post['ContactForm']['body'];
+                $contacts->send_at = time();
 
-               // var_dump($contacts); die();
+                // var_dump($contacts); die();
                 $contacts->save();
             } else {
                 Yii::$app->session->setFlash('error', 'There was an error sending your message.');
@@ -203,13 +204,50 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-    public function actionGames(){
-        $games = Games::find()->all();
-        return $this->render('games',[
-            'games'=> $games,
+
+    public function actionGames()
+    {
+        $games = Games::find()->orderBy(['create_at' => SORT_DESC])->limit(12)->all();
+        return $this->render('games', [
+            'games' => $games,
         ]);
     }
-    public function actionNews(){
+
+    public function actionNews()
+    {
         return $this->render('news');
+    }
+
+    public function actionCeateGames()
+    {
+        {
+            $model = new Games();
+            if ($model->load(Yii::$app->request->post())) {
+                $upload = UploadedFile::getInstance($model, 'file');
+
+                if ($upload) {
+                    $upload->saveAs('uploads/' . $upload->name);
+                    $model->logo = $upload->name;
+                    $model->create_at = time();
+                    $model->update_at = time();
+                    $model->create_by = Yii::$app->user->identity->username;
+                }
+                if ($model->save()) {
+                    Yii::$app->session->addFlash('success', 'Bạn đã tạo img thành cmn công');
+                    return $this->redirect(['games']);
+                    // return $this->redirect(['view', 'id' => $model->id]);
+                } else {
+                    Yii::$app->session->addFlash('danger', 'Tạo thất bại');
+                    return $this->render('create', [
+                        'model' => $model
+                    ]);
+                }
+            } else {
+
+                return $this->render('create', [
+                    'model' => $model
+                ]);
+            }
+        }
     }
 }

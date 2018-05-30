@@ -127,3 +127,10 @@ a.desc:after {
     border: 1px solid #343434;
     box-shadow: 1px 1px 3px 1px;
 }
+.img-w3-agile{
+    margin: 15px 0;
+}
+.gallery-grid img{
+    display: block;
+    width: 100%;
+}

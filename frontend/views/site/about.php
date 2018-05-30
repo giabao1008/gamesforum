@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <figure class="effect-zoe">
                             <img src="images/about.jpg" alt=" " class="img-responsive" />
                             <figcaption>
-                                <h3>Games<span>Zone</span></h3>
+                                <h3>Games<span>Forum</span></h3>
                                 <p class="icon-links">
                                     <a href="#"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></a>
                                     <a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>

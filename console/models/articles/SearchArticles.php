@@ -47,6 +47,9 @@ class SearchArticles extends Articles
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'defaultPageSize' => 5,
+            ]
         ]);
 
         $this->load($params);

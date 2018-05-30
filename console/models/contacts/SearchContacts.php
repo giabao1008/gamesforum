@@ -48,7 +48,7 @@ class SearchContacts extends Contacts
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'pagination' => [
-                'defaultPageSize' => 10, ]
+                'defaultPageSize' => 5, ]
         ]);
 
         $this->load($params);

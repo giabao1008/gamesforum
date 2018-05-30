@@ -2,11 +2,9 @@
 
 use console\models\articles\Articles;
 
-//$newsLastes = Articles::find()->orderBy(['create_at'  => SORT_DESC] )->limit(1)->all();
 $art = Articles::find()->orderBy(['create_at' => SORT_DESC])->one();
 $art_2 = Articles::find()->where(['<>','id' , $art->id ])->all();
-$a = Yii::$app->formatter->asDate($art->create_at);
-var_dump($a);
+//$a = Yii::$app->formatter->asDate($art->create_at);
 ?>
 <div class="events-w3layouts">
     <h2>News</h2>

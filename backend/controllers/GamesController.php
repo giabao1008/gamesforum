@@ -89,14 +89,33 @@ class GamesController extends AppController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        if ($model->load(Yii::$app->request->post())) {
+            $upload = UploadedFile::getInstance($model, 'file');
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            if ($upload) {
+                $upload->saveAs('uploads/' . $upload->name);
+                $model->logo = $upload->name;
+                $model->create_at = time();
+                $model->update_at= time();
+                $model->create_by = Yii::$app->user->identity->username;
+            }
+            if ($model->save()) {
+                Yii::$app->session->addFlash('success', 'Bạn đã tạo img thành cmn công');
+                return $this->redirect(['index']);
+                // return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                Yii::$app->session->addFlash('danger', 'Tạo thất bại');
+                return $this->render('update', [
+                    'model' => $model
+                ]);
+            }
+        } else {
+
+            return $this->render('update', [
+                'model' => $model,
+            ]);
         }
 
-        return $this->render('update', [
-            'model' => $model,
-        ]);
     }
 
     /**
