@@ -60,27 +60,26 @@ $this->title = 'Games Forum - Game zone for Gamer';
         <h3>Services</h3>
         <div class="col-md-3 service-grid-agileits service-grid-agileits-top">
             <span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span>
-            <h4>Quis tortor</h4>
-            <p>Curabitur suscipit porttitor aliquam. Etiam id placerat purus. Integer sodales elit eget arcu placerat.</p>
-            <a href="single.html">Read More</a>
+            <h4>Tốc độ</h4>
+            <p>Tốc độ tải game vượt trội so với các trang khác</p>
+
         </div>
         <div class="col-md-3 service-grid-agileits">
             <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
-            <h4>Eget arcu</h4>
-            <p>Curabitur suscipit porttitor aliquam. Etiam id placerat purus. Integer sodales elit eget arcu placerat.</p>
-            <a href="single.html">Read More</a>
+            <h4>Tự do</h4>
+            <p>Tự do download , chia sẻ game tới cộng đồng mạng</p>
+
         </div>
         <div class="col-md-3 service-grid-agileits service-grid-agileits-bottom">
             <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
-            <h4>Risus porta</h4>
-            <p>Curabitur suscipit porttitor aliquam. Etiam id placerat purus. Integer sodales elit eget arcu placerat.</p>
-            <a href="single.html">Read More</a>
+            <h4>Tức thời</h4>
+            <p>Các tin tức mới nhất về game được cập nhật thường xuyên và nhanh chóng</p>
+
         </div>
         <div class="col-md-3 service-grid-agileits service-grid-agileits-bottom">
             <span class="glyphicon glyphicon-object-align-right" aria-hidden="true"></span>
-            <h4>Proin sapien</h4>
-            <p>Curabitur suscipit porttitor aliquam. Etiam id placerat purus. Integer sodales elit eget arcu placerat.</p>
-            <a href="single.html">Read More</a>
+            <h4>Lưu trữ</h4>
+            <p>Là nơi lưu trữ các thể loại game, games được ưa chuộng nhất .</p>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -115,23 +114,9 @@ $this->title = 'Games Forum - Game zone for Gamer';
                     <ul class="slides">
                         <li>
                             <div class="wthree_info_grid">
-                                <h3>Duis aute dolor reprehenderit</h3>
-                                <p>Excepteur sint occaecat cupidatat non proident, sunt officia.</p>
-                                <a href="single.html" class="learn">Learn More</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="wthree_info_grid">
-                                <h3>Aliquip commodo consequat</h3>
-                                <p>Curabitur lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="single.html" class="learn">Learn More</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="wthree_info_grid">
-                                <h3>Quis autem vel eum iure ea</h3>
-                                <p>Phasellus ornare consectetur erat, eu vehicula orci finibus at.</p>
-                                <a href="single.html" class="learn">Learn More</a>
+                                <h3>Nơi tin tức về các loại game được chia sẻ miễn phí và công khai</h3>
+                                <p>Nhanh chóng, miễn phí, tiện lợi là phương châm của chúng tôi</p>
+                                <a href="/news" class="learn">Tìm hiểu thêm</a>
                             </div>
                         </li>
                     </ul>

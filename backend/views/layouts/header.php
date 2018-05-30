@@ -11,7 +11,7 @@ use yii\helpers\Html;
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><i class="fa fa-cogs"></i> Quản trị hệ thống</a>
+        <a class="navbar-brand" href="http://gamesforum.vn/backend/"><i class="fa fa-cogs"></i> Quản trị hệ thống</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -21,8 +21,7 @@ use yii\helpers\Html;
                     $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
                 } else {
                     echo ' <a href="#" class="dropdown-toggle" data-toggle="dropdown">' . Yii::$app->user->identity->username . ' <b class="caret"></b></a>';
-                    echo ' <ul class="dropdown-menu">
-                                <li><a href="#"><i class="fa fa-user"></i> Chỉnh sửa tài khoản</a></li>';
+                    echo ' <ul class="dropdown-menu"> ';
                     echo '<li>' . Html::a('Đăng xuất',
                             ['site/logout'],
                             ['class' => 'logout', 'data-method' => 'post']) . '</li>  </ul>';
