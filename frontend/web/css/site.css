@@ -148,3 +148,17 @@ a.desc:after {
     display: table;
     clear: both;
 }
+.slider{
+    max-height: 350px;
+    overflow: hidden;
+}
+#login #login-form {
+    padding: 20px 20px 0 20px ;
+}
+.require,.download-link{
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.upload-games{
+    padding-top: 30px;
+}

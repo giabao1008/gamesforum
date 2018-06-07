@@ -31,6 +31,7 @@ AppAsset::register($this);
 <?php include 'header.php' ?>
 <?php echo $content; ?>
 <?php include 'footer.php' ?>
+<?php echo (\frontend\views\widgets\LoginWidget::widget()); ?>
 <?php $this->endBody() ?>
 </body>
 </html>

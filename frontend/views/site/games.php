@@ -11,7 +11,7 @@
 
                     <div class="span span1">
                         <p class="left">Loại :</p>
-                        <p class="right"> <?= $item->gameType->name ?></p>
+                        <p class="right"> <?= $item->gameType->name  ?></p>
                         <div class="clearfix"></div>
                     </div>
                     <div class="span span2">
@@ -33,6 +33,9 @@
 <!-- gallery -->
 <div class="gallery-w3layouts" id="gallery">
     <div class="container">
+        <div class="upload-game text-right">
+            <a class="btn btn-success btn-lg" href="upload">Thêm thông tin game mới</a>
+        </div>
         <h2>12 Game mới nhất</h2>
         <div class="gallery-grids">
 

@@ -24,7 +24,9 @@ class AppAsset extends AssetBundle
         'js/jquery.flexslider.js',
         'js/jquery.magnific-popup.js',
         'js/modernizr.custom.53451.js',
-        'js/responsiveslides.min.js'
+        'js/responsiveslides.min.js',
+        'js/tinymce/tinymce.min.js',
+        'js/web.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

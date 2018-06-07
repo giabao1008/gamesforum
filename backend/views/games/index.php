@@ -44,15 +44,20 @@ $this->params['breadcrumbs'][] = $this->title;
                     return '<img class="img-small" src="http://gamesforum.vn/backend/web/uploads/'.$model->logo.'">';
                 }
             ],
-            'slug',
+           // 'slug',
             //'description',
             //'author',
             //'require',
             //'views_count',
             //'is_Hot',
-            //'create_at',
+            'create_at:dateTime',
             //'update_at',
-            'status',
+            ['attribute' =>  'status',
+             'content' => function ($model) {
+                    if ($model->status == 0) return '<span class="label label-default"> Enable </span>';
+                    else  return '<span class="label label-default"> Disable </span>';
+                },
+                ],
             //'create_by',
             ['class' => 'yii\grid\ActionColumn'],
         ],

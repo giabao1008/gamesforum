@@ -11,19 +11,19 @@ $gameNews = Games::find()->orderBy(['create_at' => SORT_DESC ])->limit(8)->all()
             <h4>Contact</h4>
             <ul>
                 <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></li>
-                <li><a href="mailto:example@mail.com"><h6>ex@mail.com</h6></a></li>
+                <li><a href="mailto:example@mail.com"><h6>tuyenbq@peacesoft.net</h6></a></li>
             </ul>
             <ul>
                 <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></li>
-                <li><h6>+18045678834</h6></li>
+                <li><h6>01234680897</h6></li>
             </ul>
             <ul>
                 <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></li>
-                <li><h6>4th Avenue,London</h6></li>
+                <li><h6>17a Tạ Quang Bủu</h6></li>
             </ul>
             <ul>
                 <li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></li>
-                <li><h6>(0033)6544 5453 644</h6></li>
+                <li><h6>01234680897</h6></li>
             </ul>
         </div>
         <div class="col-md-5 footer-middle-w3">
@@ -39,8 +39,8 @@ $gameNews = Games::find()->orderBy(['create_at' => SORT_DESC ])->limit(8)->all()
         </div>
         <div class="col-md-4 footer-right-w3">
             <a href="index.html"><h4>Games <img src="images/f1.png" alt=" " /> Forum</h4></a>
-            <p>Donec lobortis diam eu auctor porta. Phasellus in elementum tortor, sit amet imperdiet urna pellentesque non risus porta.</p>
-            <p class="agileinfo">Suspendisse convallis malesuada libero, non rutrum arcu pellentesque lacinia.</p>
+            <p>Được hoàn thiện và đóng góp bởi các thành viên cộng đồng mạng. </p>
+            <p class="agileinfo">Nơi mang tới những tựa game hay nhất, lôi cuối nhất và quan trọng hơn hết là tất cả đều miễn phí.</p>
         </div>
         <div class="clearfix"></div>
         <div class="copyright">

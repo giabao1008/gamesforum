@@ -39,7 +39,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     else  return '<span class="label label-success"> Đã đọc </span>';
                 }
             ],
-            ['class' => 'yii\grid\ActionColumn',
+            [
+                'class' => 'yii\grid\ActionColumn',
                 'template'=> '{view} {delete}'
 
             ],

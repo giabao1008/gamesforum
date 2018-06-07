@@ -38,9 +38,11 @@ class ContactsController extends AppController
      * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionView($id)
-    {
+    {   $model = $this->findModel($id);
+        $model->is_read = 1;
+        $model->save();
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
         ]);
     }
 

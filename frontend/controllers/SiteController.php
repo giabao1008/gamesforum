@@ -19,6 +19,7 @@ use console\models\games\Games;
 use console\models\games\GameType;
 use console\models\banners\Banners;
 use console\models\games\SearchGames;
+use yii\web\UploadedFile;
 /**
  * Site controller
  */
@@ -150,7 +151,6 @@ class SiteController extends Controller
                 }
             }
         }
-
         return $this->render('signup', [
             'model' => $model,
         ]);
@@ -218,36 +218,35 @@ class SiteController extends Controller
         return $this->render('news');
     }
 
-    public function actionCeateGames()
-    {
-        {
-            $model = new Games();
-            if ($model->load(Yii::$app->request->post())) {
-                $upload = UploadedFile::getInstance($model, 'file');
+    public function actionUpload(){
+        $model = new Games();
+        if ($model->load(Yii::$app->request->post())) {
+            $upload = UploadedFile::getInstance($model, 'file');
 
-                if ($upload) {
-                    $upload->saveAs('uploads/' . $upload->name);
-                    $model->logo = $upload->name;
-                    $model->create_at = time();
-                    $model->update_at = time();
-                    $model->create_by = Yii::$app->user->identity->username;
-                }
-                if ($model->save()) {
-                    Yii::$app->session->addFlash('success', 'Bạn đã tạo img thành cmn công');
-                    return $this->redirect(['games']);
-                    // return $this->redirect(['view', 'id' => $model->id]);
-                } else {
-                    Yii::$app->session->addFlash('danger', 'Tạo thất bại');
-                    return $this->render('create', [
-                        'model' => $model
-                    ]);
-                }
+            if ($upload) {
+                $upload->saveAs('../../backend/web/uploads/' . $upload->name);
+                $model->logo = $upload->name;
+                $model->create_at = time();
+                $model->update_at = time();
+                $model->is_Hot = 1 ;
+                $model->status = 0;
+                $model->create_by = Yii::$app->user->identity->username;
+            }
+            if ($model->save()) {
+                Yii::$app->session->addFlash('success', 'Bạn đã tạo img thành cmn công, vui lòng đợi admin duyệt bài');
+                return $this->redirect(['games']);
+                // return $this->redirect(['view', 'id' => $model->id]);
             } else {
-
-                return $this->render('create', [
+                Yii::$app->session->addFlash('danger', 'Tạo thất bại');
+                return $this->render('upload', [
                     'model' => $model
                 ]);
             }
+        } else {
+
+            return $this->render('upload', [
+                'model' => $model
+            ]);
         }
     }
 }

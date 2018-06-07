@@ -8,7 +8,7 @@ $this->title = 'Games Forum - Game zone for Gamer';
 <!-- trend -->
 <div class="trend-w3layouts">
     <div class="container">
-        <h2>Trending Games</h2>
+        <h2>Thể loại games</h2>
         <?php if ($GameType) { ?>
         <ul id="flexiselDemo1">
         <?php foreach ($GameType as $item){  ?>
@@ -57,7 +57,7 @@ $this->title = 'Games Forum - Game zone for Gamer';
 <!-- services-->
 <div class="services-agileits-w3layouts">
     <div class="container">
-        <h3>Services</h3>
+        <h3>Dịch vụ</h3>
         <div class="col-md-3 service-grid-agileits service-grid-agileits-top">
             <span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span>
             <h4>Tốc độ</h4>

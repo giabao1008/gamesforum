@@ -15,6 +15,8 @@ class GameController extends \yii\web\Controller
         $game = Games::findOne(['slug'=> $slug]);
         $same = Games::find()->where(['game_type'=>$game->game_type])->andWhere(['<>','id' , $game->id ])->all();
         $article_Time = Articles::find()->orderBy(['create_at'  => SORT_DESC]  )->limit(7)->all();
+        $game->views_count += 1;
+        $game->save();
         return $this->render('game',[
             'game' => $game,
             'art' => $art,
