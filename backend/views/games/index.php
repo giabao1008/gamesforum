@@ -21,16 +21,16 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-      //  'filterModel' => $searchModel,
+        //  'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-       //  'id',
+            //  'id',
             [
                 'attribute' => 'game_type',
                 'format' => 'raw',
                 'contentOptions' => [' style ' => 'height: 80px'],
-                'value' => function($model){
+                'value' => function ($model) {
                     return $model->gameType->name;
                 }
             ],
@@ -40,11 +40,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'logo',
                 'format' => 'raw',
                 'contentOptions' => [' style ' => 'height: 80px'],
-                'value' => function($model){
-                    return '<img class="img-small" src="http://gamesforum.vn/backend/web/uploads/'.$model->logo.'">';
+                'value' => function ($model) {
+                    return '<img class="img-small" src="http://gamesforum.vn/backend/web/uploads/' . $model->logo . '">';
                 }
             ],
-           // 'slug',
+            // 'slug',
             //'description',
             //'author',
             //'require',
@@ -52,14 +52,17 @@ $this->params['breadcrumbs'][] = $this->title;
             //'is_Hot',
             'create_at:dateTime',
             //'update_at',
-            ['attribute' =>  'status',
-             'content' => function ($model) {
+            ['attribute' => 'status',
+                'content' => function ($model) {
                     if ($model->status == 0) return '<span class="label label-default"> Enable </span>';
                     else  return '<span class="label label-default"> Disable </span>';
                 },
-                ],
+            ],
             //'create_by',
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 </div>
+
+<!--// Duyệt bài-->
+

@@ -207,7 +207,7 @@ class SiteController extends FrontEndController
 
     public function actionGames()
     {
-        $games = Games::find()->orderBy(['create_at' => SORT_DESC])->limit(12)->all();
+        $games = Games::find()->orderBy(['create_at' => SORT_DESC])->all();
         return $this->render('games', [
             'games' => $games,
         ]);
@@ -233,14 +233,14 @@ class SiteController extends FrontEndController
                 $model->create_by = Yii::$app->user->identity->username;
             }
             if ($model->save()) {
-                Yii::$app->session->addFlash('success', 'Bạn đã tạo img thành cmn công, vui lòng đợi admin duyệt bài');
-                return $this->redirect(['games']);
+                $this->redirect(['games']);
+                return  Yii::$app->session->addFlash('success', 'Bạn đã upload game thành công, vui lòng đợi admin duyệt bài');
                 // return $this->redirect(['view', 'id' => $model->id]);
             } else {
-                Yii::$app->session->addFlash('danger', 'Tạo thất bại');
-                return $this->render('upload', [
+                $this->render('upload', [
                     'model' => $model
                 ]);
+                return   Yii::$app->session->addFlash('danger', 'Tạo thất bại');
             }
         } else {
 

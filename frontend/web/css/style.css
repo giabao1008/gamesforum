@@ -860,7 +860,6 @@ figure.effect-zoe:hover p.icon-links a:first-child {
     padding: 0 35px;
 }
 .collection-left{
-	background:url(../images/c1.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	min-height:700px;
 }
@@ -1047,6 +1046,9 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 }
 .gallery-grids {
     margin: 3em 0 0;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
 }
 .gallery-grid{
 	float:left;
@@ -2343,6 +2345,9 @@ color:rgb(2, 24, 136) !important;
 	}
 	.gallery-grids {
 		margin:0;
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
 	}
 	.about-grid-left-agileits-w3layouts, .about-grid-right-w3-agile {
 		width: 100%;

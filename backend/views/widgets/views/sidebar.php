@@ -1,6 +1,8 @@
 <?php
     use console\models\contacts\Contacts;
+    use console\models\games\Games;
     $total = Contacts::find()->count();
+    $game = count(Games::find()->where(['<>','create_by','admin'])->orderBy(['create_at' => SORT_DESC])->all());
 ?>
 <div id="sidebar" role="navigation">
     <div class="panel panel-info">
@@ -13,7 +15,7 @@
         <ul id="menu" class="list-group">
             <li class="list-group-item">
                 <a href="http://gamesforum.vn/backend/games.html">
-                    <i class="fa fa-gamepad" aria-hidden="true"></i> <span>Games</span>
+                    <i class="fa fa-gamepad" aria-hidden="true"></i> <span>Games</span><p> (<b><?= $game?> Chờ duyệt</b>)</p>
                 </a>
             </li>
             <li class="list-group-item">

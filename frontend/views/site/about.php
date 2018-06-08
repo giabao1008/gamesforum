@@ -30,12 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <img src="images/about.jpg" alt=" " class="img-responsive" />
                             <figcaption>
                                 <h3>Games<span>Forum</span></h3>
-                                <p class="icon-links">
-                                    <a href="#"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></a>
-                                    <a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-                                    <a href="#"><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span></a>
-                                </p>
-                                <p class="description">Suspendisse convallis malesuada libero, non rutrum arcu pellentesque lacinia.</p>
+                                <p class="description">Sự hài lòng của các game thủ là động lực của chúng tôi khi xây dựng diễn đàn.</p>
                             </figcaption>
                         </figure>
                     </div>
@@ -55,24 +50,24 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-md-8 col-sm-8 collection-right">
                 <div class="col-md-4 col-sm-4 collection-grid collection-text collection-grid-1">
                     <img src="images/c1.png" alt="">
-                    <h3>Convallis </h3>
-                    <p>A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque.</p>
+                    <h3>Trò chơi</h3>
+                    <p>Tập hợp các games giải trí với đầy đủ các loại games khác nhau như chiến thuật, đấu trí, thể thao, moba....</p>
                 </div>
                 <div class="col-md-4 col-sm-4 collection-grid collection-image collection-grid-2">
 
                 </div>
                 <div class="col-md-4 col-sm-4 collection-grid collection-text collection-grid-3">
                     <img src="images/c2.png" alt="" />
-                    <h3>Lacinia</h3>
-                    <p>A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque.</p>
+                    <h3>Tiện lợi</h3>
+                    <p>Download game đơn giản, an toàn, cài đặt có thể chơi ngay.</p>
                 </div>
                 <div class="col-md-4 col-sm-4 collection-grid collection-image collection-grid-4">
 
                 </div>
                 <div class="col-md-4 col-sm-4 collection-grid collection-text collection-grid-5">
                     <img src="images/c3.png" alt="" />
-                    <h3>Sapien</h3>
-                    <p>A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque.</p>
+                    <h3>Cập nhật</h3>
+                    <p>Game được cập nhật liên tục, tức thời bởi các admin và thành viên của diễn đàn.</p>
                 </div>
                 <div class="col-md-4 col-sm-4 collection-grid collection-image collection-grid-6">
 
@@ -88,8 +83,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <!-- team -->
     <div class="team-w3layouts">
         <div class="container">
-            <h3>Our Team</h3>
+            <h3>Đội của chúng tôi</h3>
             <div class="w3l_team_grids-agile">
+                <div class="col-md-3 w3l_team_grid"></div>
                 <div class="col-md-3 w3l_team_grid">
                     <div class="view view-second">
                         <img src="images/t1.jpg" alt=" " class="img-responsive" />
@@ -97,17 +93,16 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="content">
                             <div class="w3l_social_icons w3l_social_icons1">
                                 <ul>
-                                    <li><a href="#" class="linkedin"></a></li>
-                                    <li><a href="#" class="google"></a></li>
-                                    <li><a href="#" class="twitter"></a></li>
-                                    <li><a href="#" class="facebook"></a></li>
+                                    <li><a href="https://facebook.com/bao10081997" class="facebook"></a></li>
                                 </ul>
                             </div>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                            <p>Ngày sinh: 10-08-1997</p>
+                            <p>Sinh viên tại: Học viện công nghệ thông tin Bách Khoa</p>
+                            <p>Quê quán : Hải Phòng</p>
                         </div>
                     </div>
-                    <h4>Mariya Thomas</h4>
-                    <p>Games Designer</p>
+                    <h4>Bùi Quang Tuyền</h4>
+                    <p>Lập trình viên</p>
                 </div>
                 <div class="col-md-3 w3l_team_grid">
                     <div class="view view-second">
@@ -116,56 +111,18 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="content">
                             <div class="w3l_social_icons w3l_social_icons1">
                                 <ul>
-                                    <li><a href="#" class="linkedin"></a></li>
-                                    <li><a href="#" class="google"></a></li>
-                                    <li><a href="#" class="twitter"></a></li>
-                                    <li><a href="#" class="facebook"></a></li>
+                                    <li><a href="https://www.facebook.com/Hoangtrongtu96" class="facebook"></a></li>
                                 </ul>
                             </div>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                            <p>Ngày sinh: 12-09-1996</p>
+                            <p>Sinh viên tại: Học viện công nghệ thông tin Bách Khoa</p>
+                            <p>Quê quán: Quảng Ninh</p>
                         </div>
                     </div>
-                    <h4>Dino Jass</h4>
-                    <p>Games Designer</p>
+                    <h4>Hoàng Trọng Tú</h4>
+                    <p>Lập trình viên</p>
                 </div>
-                <div class="col-md-3 w3l_team_grid">
-                    <div class="view view-second">
-                        <img src="images/t3.jpg" alt=" " class="img-responsive" />
-                        <div class="mask"></div>
-                        <div class="content">
-                            <div class="w3l_social_icons w3l_social_icons1">
-                                <ul>
-                                    <li><a href="#" class="linkedin"></a></li>
-                                    <li><a href="#" class="google"></a></li>
-                                    <li><a href="#" class="twitter"></a></li>
-                                    <li><a href="#" class="facebook"></a></li>
-                                </ul>
-                            </div>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-                        </div>
-                    </div>
-                    <h4>Michael Doe</h4>
-                    <p>Games Designer</p>
-                </div>
-                <div class="col-md-3 w3l_team_grid">
-                    <div class="view view-second">
-                        <img src="images/t4.jpg" alt=" " class="img-responsive" />
-                        <div class="mask"></div>
-                        <div class="content">
-                            <div class="w3l_social_icons w3l_social_icons1">
-                                <ul>
-                                    <li><a href="#" class="linkedin"></a></li>
-                                    <li><a href="#" class="google"></a></li>
-                                    <li><a href="#" class="twitter"></a></li>
-                                    <li><a href="#" class="facebook"></a></li>
-                                </ul>
-                            </div>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-                        </div>
-                    </div>
-                    <h4>Rita James</h4>
-                    <p>Games Designer</p>
-                </div>
+                <div class="col-md-3 w3l_team_grid"></div>
                 <div class="clearfix"> </div>
             </div>
         </div>

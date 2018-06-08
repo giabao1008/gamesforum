@@ -17,6 +17,9 @@ use Yii;
  * @property string $create_by
  * @property string $update_by
  * @property string $desc
+ * @property string $articles
+ * @property int $views_count
+ * @property int $like
  */
 class Articles extends \yii\db\ActiveRecord
 {
@@ -37,8 +40,9 @@ class Articles extends \yii\db\ActiveRecord
         return [
             [['body', 'create_at', 'update_at', 'create_by', 'update_by'], 'required'],
             [['body'], 'string'],
-            [['create_at', 'update_at'], 'integer'],
-            [['title', 'image', 'slug', 'create_by', 'update_by', 'desc'], 'string', 'max' => 255],
+            [['create_at', 'update_at', 'views_count', 'like'], 'integer'],
+            [['title', 'image', 'slug', 'create_by', 'update_by', 'desc', 'articles'], 'string', 'max' => 255],
+            [['file'],'file','extensions'=>'jpg,png']
         ];
     }
 
@@ -58,6 +62,9 @@ class Articles extends \yii\db\ActiveRecord
             'create_by' => 'Create By',
             'update_by' => 'Update By',
             'desc' => 'Desc',
+            'articles' => 'Articles',
+            'views_count' => 'Views Count',
+            'like' => 'Like',
         ];
     }
 }

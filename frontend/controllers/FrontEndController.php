@@ -20,27 +20,21 @@ class FrontEndController extends \yii\web\Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'error','index','view','signup','games','contact','about','news'],
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['index','view'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'actions' => ['logout'],
+                        'actions' => ['logout','upload'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
                     [
-                        'actions' => ['upload'],
                         'allow' => true,
-                        'roles' => ['@','post'],
+                        'actions' => ['upload'],
+                        'roles' => ['post','admin'],
+                        'denyCallback' => function ($rule, $action) {
+                            return !Yii::$app->response->redirect('site/error.php');
+                        },
                     ]
                 ],
             ],

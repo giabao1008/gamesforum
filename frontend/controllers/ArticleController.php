@@ -12,7 +12,7 @@ class ArticleController extends \yii\web\Controller
     public function actionView($slug)
     {
         $art = Articles::findOne(['slug'=> $slug]);
-        $art->views_count += 1 ;
+        $art->views_count ++;
         $art->save();
         return $this->render('article',[
             'art' => $art,

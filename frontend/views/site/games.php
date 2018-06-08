@@ -38,7 +38,7 @@
                 <a class="btn btn-success btn-md" href="upload">Thêm game mới <i class="glyphicon glyphicon-plus"> </i></a>
             <?php } ?>
         </div>
-        <h2>12 Game mới nhất</h2>
+        <h2>Game mới nhất</h2>
         <div class="gallery-grids">
 
             <?php foreach ($games as $item) { ?>
@@ -50,7 +50,6 @@
                     </a>
                 </div>
             <?php } ?>
-
             <div class="clearfix"></div>
         </div>
     </div>

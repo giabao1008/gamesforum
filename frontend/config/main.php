@@ -23,6 +23,9 @@ return [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
+            'loginUrl' => 'error-403.html'
+//   '
+
         ],
         'session' => [
             // this is the name of the session cookie used for login on the frontend
