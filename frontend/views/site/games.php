@@ -34,7 +34,9 @@
 <div class="gallery-w3layouts" id="gallery">
     <div class="container">
         <div class="upload-game text-right">
-            <a class="btn btn-success btn-lg" href="upload">Thêm thông tin game mới</a>
+            <?php if(yii::$app->user->isGuest ){?> <a class="btn btn-default btn-md disabled"> <i class="glyphicon glyphicon-ban-circle"> </i> Bạn vui lòng đăng nhập để sử dụng chức năng này </a> <?php } else { ?>
+                <a class="btn btn-success btn-md" href="upload">Thêm game mới <i class="glyphicon glyphicon-plus"> </i></a>
+            <?php } ?>
         </div>
         <h2>12 Game mới nhất</h2>
         <div class="gallery-grids">

@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="modal-body">
                     <div class="row">
-                        <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+                        <?php $form = ActiveForm::begin(['action' => ['site/login'],'method' => 'post','id' => 'login-form']); ?>
 
                         <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
 

@@ -81,7 +81,7 @@ return [
         ],
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
-            'defaultRoles' => ['admin', 'post'],
+            //'defaultRoles' => ['admin', 'post'],
         ],
 
     ],

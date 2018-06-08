@@ -8,7 +8,7 @@ $gameNews = Games::find()->orderBy(['create_at' => SORT_DESC ])->limit(8)->all()
 <div class="footer">
     <div class="container">
         <div class="col-md-3 footer-left-w3">
-            <h4>Contact</h4>
+            <h4>Liên hệ</h4>
             <ul>
                 <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></li>
                 <li><a href="mailto:example@mail.com"><h6>tuyenbq@peacesoft.net</h6></a></li>
@@ -27,7 +27,7 @@ $gameNews = Games::find()->orderBy(['create_at' => SORT_DESC ])->limit(8)->all()
             </ul>
         </div>
         <div class="col-md-5 footer-middle-w3">
-            <h4>Latest Games</h4>
+            <h4>Game mới</h4>
             <?php
                 foreach ($gameNews as $gameNew) {
             ?>
@@ -38,7 +38,7 @@ $gameNews = Games::find()->orderBy(['create_at' => SORT_DESC ])->limit(8)->all()
             <div class="clearfix"></div>
         </div>
         <div class="col-md-4 footer-right-w3">
-            <a href="index.html"><h4>Games <img src="images/f1.png" alt=" " /> Forum</h4></a>
+            <a href="index.html"><h4>Games <img src="http://gamesforum.vn/frontend/web/images/f1.png" alt=" " /> Forum</h4></a>
             <p>Được hoàn thiện và đóng góp bởi các thành viên cộng đồng mạng. </p>
             <p class="agileinfo">Nơi mang tới những tựa game hay nhất, lôi cuối nhất và quan trọng hơn hết là tất cả đều miễn phí.</p>
         </div>
