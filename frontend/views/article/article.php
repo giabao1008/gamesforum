@@ -1,4 +1,6 @@
-<?php $this->title = ($art) ? $art->title : 'Not found'; ?>
+<?php $this->title = ($art) ? $art->title : 'Not found';
+?>
+
 <div class="article article-bg">
 
    <div class="col-md-12">

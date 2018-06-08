@@ -621,7 +621,7 @@ p.agileinfo{
 	overflow: hidden;
 	padding:0;
 	line-height: 1;
-	z-index: 9999;
+	z-index: 90;
 	padding: 10px;
     display: inline-flex;
 }

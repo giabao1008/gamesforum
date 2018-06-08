@@ -8,6 +8,12 @@ return [
     'contact' => 'site/contact',
     'login'=> 'site/login',
     'logout' => 'site/logout',
-    'upload' => 'site/upload'
+    'upload' => 'site/upload',
+    'article/<slug:[a-zA-Z0-9-]+>/'=>'article/view',
+    'game/<slug:[a-zA-Z0-9-]+>/'=>'game/view',
+//    [
+//        'class' => 'yii\rest\UrlRule',
+//        'controller' => 'demo'
+//    ]
 
 ];
