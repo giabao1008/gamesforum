@@ -1,6 +1,6 @@
 <?php
 use console\models\games\Games;
-$gameNews = Games::find()->orderBy(['create_at' => SORT_DESC ])->limit(8)->all();
+$gameNews = Games::find()->orderBy(['create_at' => SORT_DESC ])->where(['status' => 1])->limit(8)->all();
  $url = 'http://gamesforum.vn/backend/web/uploads' ;
 ?>
 <!-- footer -->

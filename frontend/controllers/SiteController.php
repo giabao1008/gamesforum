@@ -47,16 +47,16 @@ class SiteController extends FrontEndController
      * @return mixed
      */
     public function actionIndex()
-    {
-        $GameType = GameType::find()->all();
-        $gameNews = Games::find()->where(['status' => 1])->orderBy(['create_at' => SORT_DESC])->limit(8)->all();
-        $banner = Banners::find()->where(['status' => 1])->all();
-        return $this->render('index', [
-            'gameNews' => $gameNews,
-            'GameType' => $GameType,
-            'banner' => $banner,
-        ]);
-    }
+{
+$GameType = GameType::find()->all();
+$gameNews = Games::find()->where(['status' => 1])->orderBy(['create_at' => SORT_DESC])->limit(8)->all();
+$banner = Banners::find()->where(['status' => 1])->all();
+return $this->render('index', [
+'gameNews' => $gameNews,
+'GameType' => $GameType,
+'banner' => $banner,
+]);
+}
 
     /**
      * Logs in a user.
@@ -207,7 +207,7 @@ class SiteController extends FrontEndController
 
     public function actionGames()
     {
-        $games = Games::find()->orderBy(['create_at' => SORT_DESC])->all();
+        $games = Games::find()->orderBy(['create_at' => SORT_DESC])->where(['status' => 1])->all();
         return $this->render('games', [
             'games' => $games,
         ]);
