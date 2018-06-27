@@ -43,7 +43,7 @@
 
             <?php foreach ($games as $item) { ?>
                 <div class="gallery-grid">
-                    <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
+                    <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s" title="<?= $item->name?>"
                        href="#small-dialog-<?= $item->id ?>">
                         <img src="http://gamesforum.vn/backend/web/uploads/<?= $item->logo ?>" alt=" "
                              class="img-responsive zoom-img"/>

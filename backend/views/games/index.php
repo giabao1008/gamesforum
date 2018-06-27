@@ -26,14 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             //  'id',
-            [
-                'attribute' => 'game_type',
-                'format' => 'raw',
-                'contentOptions' => [' style ' => 'height: 80px'],
-                'value' => function ($model) {
-                    return $model->gameType->name;
-                }
-            ],
+
             'name',
             'download',
             [
@@ -44,7 +37,14 @@ $this->params['breadcrumbs'][] = $this->title;
                     return '<img class="img-small" src="http://gamesforum.vn/backend/web/uploads/' . $model->logo . '">';
                 }
             ],
-            // 'slug',
+            [
+                'attribute' => 'game_type',
+                'format' => 'raw',
+                'contentOptions' => [' style ' => 'height: 80px'],
+                'value' => function ($model) {
+                    return $model->gameType->name;
+                }
+            ],
             //'description',
             //'author',
             //'require',
@@ -54,8 +54,8 @@ $this->params['breadcrumbs'][] = $this->title;
             //'update_at',
             ['attribute' => 'status',
                 'content' => function ($model) {
-                    if ($model->status == 0) return '<span class="label label-default"> Enable </span>';
-                    else  return '<span class="label label-default"> Disable </span>';
+                    if ($model->status == 0) return '<span class="label label-default">  Disable </span>';
+                    else  return '<span class="label label-success"> Enable  </span>';
                 },
             ],
             //'create_by',

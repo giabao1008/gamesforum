@@ -58,7 +58,7 @@ class Games extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'game_type' => 'Chọn loại game',
+            'game_type' => 'Loại Games',
             'name' => 'Tên',
             'logo' => 'Ảnh đại diện cho game',
             'slug' => 'đường dẫn url',

@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
+use backend\Url\Friendly;
 /**
  * GamesController implements the CRUD actions for Games model.
  */
@@ -57,6 +58,7 @@ class GamesController extends AppController
             if ($upload) {
                 $upload->saveAs('uploads/' . $upload->name);
                 $model->logo = $upload->name;
+                $model->slug = Friendly::url_friendly($model->slug);
                 $model->create_at = time();
                 $model->update_at= time();
                 $model->create_by = Yii::$app->user->identity->username;
