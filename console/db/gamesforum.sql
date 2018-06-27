@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 08, 2018 lúc 09:40 AM
+-- Thời gian đã tạo: Th6 27, 2018 lúc 02:58 PM
 -- Phiên bản máy phục vụ: 10.1.31-MariaDB
 -- Phiên bản PHP: 7.2.4
 
@@ -49,7 +49,7 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`id`, `title`, `body`, `image`, `slug`, `create_at`, `update_at`, `create_by`, `update_by`, `desc`, `articles`, `views_count`, `like`) VALUES
-(2, 'ARURF sẽ được mở trong cuối tuần (26/05- 4:00 ngày 28/05)', '<p>Ch&agrave;o mọi người,</p>\r\n<p>R&otilde; r&agrave;ng l&agrave; giải Clash đầu ti&ecirc;n n&agrave;y đ&atilde; kh&ocirc;ng được như mong đợi. D&ugrave; kh&ocirc;ng thể ho&agrave;n to&agrave;n thay thế, nhưng ch&uacute;ng t&ocirc;i sẽ mở chế độ ARURF trong suốt cuối tuần.</p>\r\n<p>C&oacute; lẽ đ&acirc;y kh&ocirc;ng phải trải nghiệm cạnh tranh bạn đang tr&ocirc;ng đợi, nhưng, bằng khả năng của m&igrave;nh, ch&uacute;ng t&ocirc;i muốn đem lại cho bạn v&agrave; bạn b&egrave; thứ g&igrave; đ&oacute; mới mẻ để kh&aacute;m ph&aacute; v&agrave; tận hưởng trong thời gian ch&uacute;ng t&ocirc;i t&igrave;m hiểu v&agrave; đưa ra giải ph&aacute;p cho việc ho&atilde;n giải Clash lần n&agrave;y. Trong số c&aacute;c chế độ thường xuy&ecirc;n được người chơi y&ecirc;u cầu, ch&uacute;ng t&ocirc;i thấy ARURF l&agrave; thứ ph&ugrave; hợp nhất hiện tại.</p>\r\n<p><strong>Xin n&oacute;i r&otilde;, giải quyết vấn đề với Clash vẫn l&agrave; ưu ti&ecirc;n h&agrave;ng đầu của ch&uacute;ng t&ocirc;i.</strong>&nbsp;ARURF chỉ l&agrave; một phần trong những g&igrave; ch&uacute;ng t&ocirc;i đưa ra để b&ugrave; đắp cho người chơi, v&agrave; ch&uacute;ng t&ocirc;i đang c&acirc;n nhắc c&aacute;c lựa chọn đối với những người chơi bị ảnh hưởng.</p>\r\n<p>Chế độ ARURF sẽ k&eacute;o d&agrave;i suốt cuối tuần cho&nbsp;đến&nbsp;<strong><del>18:00</del>&nbsp;4:00 thứ Hai, 28/05/2018.<span style=\"color: #ff0000;\">&nbsp;(Ch&acirc;n th&agrave;nh xin lỗi c&aacute;c bạn v&igrave; chế độ phải đ&oacute;ng sớm hơn dự kiến)</span></strong></p>\r\n<p><strong>Lưu &yacute;:&nbsp;</strong>Ch&uacute;ng t&ocirc;i mở chế độ n&agrave;y ra trước so với lịch tr&igrave;nh n&ecirc;n c&oacute; thể sẽ c&oacute; một số lỗi hoặc tương t&aacute;c lạ. Do đ&oacute;, ban đầu ch&uacute;ng t&ocirc;i sẽ tắt một số ngọc v&agrave; tướng.</p>\r\n<p>Ch&uacute;ng t&ocirc;i sẽ c&oacute; th&ecirc;m th&ocirc;ng tin về kế hoạch tiếp theo cho Clash những ng&agrave;y tới, c&ograve;n trong l&uacute;c n&agrave;y, c&ugrave;ng xả chi&ecirc;u với ARURF đi n&agrave;o!</p>', '6638_1.jpg', 'lien-minh-huyen-thoai', 1527677324, 1527677324, 'admin', 'admin', 'ARURF sẽ được mở trong cuối tuần (26/05 tới 4:00 ngày 28/05)', NULL, 26, NULL);
+(2, 'ARURF sẽ được mở trong cuối tuần (26/05- 4:00 ngày 28/05)', '<p>Ch&agrave;o mọi người,</p>\r\n<p>R&otilde; r&agrave;ng l&agrave; giải Clash đầu ti&ecirc;n n&agrave;y đ&atilde; kh&ocirc;ng được như mong đợi. D&ugrave; kh&ocirc;ng thể ho&agrave;n to&agrave;n thay thế, nhưng ch&uacute;ng t&ocirc;i sẽ mở chế độ ARURF trong suốt cuối tuần.</p>\r\n<p>C&oacute; lẽ đ&acirc;y kh&ocirc;ng phải trải nghiệm cạnh tranh bạn đang tr&ocirc;ng đợi, nhưng, bằng khả năng của m&igrave;nh, ch&uacute;ng t&ocirc;i muốn đem lại cho bạn v&agrave; bạn b&egrave; thứ g&igrave; đ&oacute; mới mẻ để kh&aacute;m ph&aacute; v&agrave; tận hưởng trong thời gian ch&uacute;ng t&ocirc;i t&igrave;m hiểu v&agrave; đưa ra giải ph&aacute;p cho việc ho&atilde;n giải Clash lần n&agrave;y. Trong số c&aacute;c chế độ thường xuy&ecirc;n được người chơi y&ecirc;u cầu, ch&uacute;ng t&ocirc;i thấy ARURF l&agrave; thứ ph&ugrave; hợp nhất hiện tại.</p>\r\n<p><strong>Xin n&oacute;i r&otilde;, giải quyết vấn đề với Clash vẫn l&agrave; ưu ti&ecirc;n h&agrave;ng đầu của ch&uacute;ng t&ocirc;i.</strong>&nbsp;ARURF chỉ l&agrave; một phần trong những g&igrave; ch&uacute;ng t&ocirc;i đưa ra để b&ugrave; đắp cho người chơi, v&agrave; ch&uacute;ng t&ocirc;i đang c&acirc;n nhắc c&aacute;c lựa chọn đối với những người chơi bị ảnh hưởng.</p>\r\n<p>Chế độ ARURF sẽ k&eacute;o d&agrave;i suốt cuối tuần cho&nbsp;đến&nbsp;<strong><del>18:00</del>&nbsp;4:00 thứ Hai, 28/05/2018.<span style=\"color: #ff0000;\">&nbsp;(Ch&acirc;n th&agrave;nh xin lỗi c&aacute;c bạn v&igrave; chế độ phải đ&oacute;ng sớm hơn dự kiến)</span></strong></p>\r\n<p><strong>Lưu &yacute;:&nbsp;</strong>Ch&uacute;ng t&ocirc;i mở chế độ n&agrave;y ra trước so với lịch tr&igrave;nh n&ecirc;n c&oacute; thể sẽ c&oacute; một số lỗi hoặc tương t&aacute;c lạ. Do đ&oacute;, ban đầu ch&uacute;ng t&ocirc;i sẽ tắt một số ngọc v&agrave; tướng.</p>\r\n<p>Ch&uacute;ng t&ocirc;i sẽ c&oacute; th&ecirc;m th&ocirc;ng tin về kế hoạch tiếp theo cho Clash những ng&agrave;y tới, c&ograve;n trong l&uacute;c n&agrave;y, c&ugrave;ng xả chi&ecirc;u với ARURF đi n&agrave;o!</p>', '6638_1.jpg', 'lien-minh-huyen-thoai', 1527677324, 1527677324, 'admin', 'admin', 'ARURF sẽ được mở trong cuối tuần (26/05 tới 4:00 ngày 28/05)', NULL, 31, NULL);
 
 -- --------------------------------------------------------
 
@@ -69,6 +69,7 @@ CREATE TABLE `auth_assignment` (
 
 INSERT INTO `auth_assignment` (`item_name`, `user_id`, `created_at`) VALUES
 ('admin', '1', 1526701828),
+('post', '10', 1528454156),
 ('post', '3', 1528357267);
 
 -- --------------------------------------------------------
@@ -239,8 +240,9 @@ INSERT INTO `games` (`id`, `game_type`, `name`, `logo`, `slug`, `description`, `
 (24, 16, 'Age of Empires', 'Age of Empires.jpg', 'Age of Empires', '<h2>Age of Empires</h2>', '', '<h2>Age of Empires</h2>', 0, NULL, 1527064245, 1527064245, 1, 'admin', '', 0),
 (25, 16, 'Warcraft 3', 'Warcraft 3.jpg', 'Warcraft 3', '<h2>Warcraft 3</h2>', '', '<h2>Warcraft 3</h2>', 0, NULL, 1527064310, 1527064310, 1, 'admin', '', 0),
 (26, 16, 'Starcraft 2', 'Starcraft 2.jpg', 'Starcraft 2', '<h2>Starcraft 2</h2>', '', '<h2>Starcraft 2</h2>', 0, NULL, 1527064385, 1527064385, 1, 'admin', '', 0),
-(27, 17, 'Dota 2', 'Dota 2.jpg', 'Dota 2', '<p>Dota 2</p>', '', '<p>Dota 2</p>', 0, NULL, 1527064567, 1527064567, 1, 'admin', '', 0),
-(28, 17, 'Liên minh huyền thoại', 'Liên minh huyền thoại.jpg', 'Liên minh huyền thoại', '<p>Li&ecirc;n minh huyền thoại</p>', '', '<p>Li&ecirc;n minh huyền thoại</p>', 37, NULL, 1527064632, 1527064632, 1, 'admin', '', 0);
+(27, 17, 'Dota 2', 'Dota 2.jpg', 'Dota', '<p>Dota 2</p>', '', '<p>Dota 2</p>', 2, NULL, 1527064567, 1527064567, 1, 'admin', '', 0),
+(28, 17, 'Liên minh huyền thoại', 'Liên minh huyền thoại.jpg', 'lien-minh-huyen-thoai', '<p>Li&ecirc;n minh huyền thoại</p>', '', '<p>Li&ecirc;n minh huyền thoại</p>', 41, NULL, 1527064632, 1527064632, 1, 'admin', '', 0),
+(29, 9, 'Bùi Quang Tuyền test Tên', 't2.jpg', '/game-nhap-vai', '<p>test game</p>', 'Bùi Quang Tuyền', '<p>b&ugrave;i quang tuyền</p>', 0, 1, 1528458916, 1528458916, 0, 'testpost', '/test-link-download', NULL);
 
 -- --------------------------------------------------------
 
@@ -348,7 +350,8 @@ INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_res
 (1, 'admin', 'b851-cFT4MT0ssNDwnuDxeqYU7LZ4JE_', '$2y$13$QtQGkGPqScDjxD9TKj3GOu9N4YuiHwHQESkq5K8hb6Y.bZFnHXkMW', NULL, 'giabao1008@gmail.com', 10, 1526698591, 1526922441),
 (7, 'giabao1008', 'H5lpexUcGON4gGrOR6cKgE1CfRrwmcGn', '$2y$13$QtQGkGPqScDjxD9TKj3GOu9N4YuiHwHQESkq5K8hb6Y.bZFnHXkMW', NULL, 'giabao1008@gmail.com1', 10, 1528379501, 1528379501),
 (8, '12345', 'GAoyr-ylsNvZ7sZ07u49xDZ-jkV0rD79', '$2y$13$Cb.YdLAbwEeHAn0SMnxss.4qxaEgSpqnrun31bQzMoUtMCTCDkzsO', NULL, '123456@gmail.com', 10, 1528426891, 1528426891),
-(9, 'testlogin', 'EAtnOp3PcfhBQ3LOZo5YlcLDehT0OzOy', '$2y$13$.TWOvcynp6BgeKoxB9FkPuCkGoddNr5keyQQwMLF5GuDgbU2Zhay6', NULL, 'testlogin@gmail.com', 10, 1528427626, 1528427626);
+(9, 'testlogin', 'EAtnOp3PcfhBQ3LOZo5YlcLDehT0OzOy', '$2y$13$.TWOvcynp6BgeKoxB9FkPuCkGoddNr5keyQQwMLF5GuDgbU2Zhay6', NULL, 'testlogin@gmail.com', 10, 1528427626, 1528427626),
+(10, 'testpost', 'jYnIBMKddyKO03lXJmL8bur8CYcnSRRl', '$2y$13$Ot1O1RtCKdFB4LAOWu/AZuaQvoc2ZZGJnff5tc.CycsdUprNr2eSm', NULL, 'testpost@gmail.com', 10, 1528454156, 1528454156);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -444,7 +447,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT cho bảng `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `banners`
@@ -462,7 +465,7 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT cho bảng `games`
 --
 ALTER TABLE `games`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT cho bảng `game_type`
@@ -480,7 +483,7 @@ ALTER TABLE `members`
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
