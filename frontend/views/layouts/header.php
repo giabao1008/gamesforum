@@ -20,15 +20,15 @@ if (Yii::$app->requestedRoute === 'site/index' || Yii::$app->requestedRoute === 
 
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="hover-effect"><a href="/trang-chu">Home</a></li>
-                        <li class="hover-effect"><a href="/about-us">About</a></li>
-                        <li class="hover-effect"><a href="/games">Games</a></li>
-                        <li class="hover-effect"><a href="/news">News</a></li>
-                        <li class="hover-effect"><a href="/contact">Contact us</a></li>
+                        <li class="hover-effect"><a href="/trang-chu">Trang chủ</a></li>
+                        <li class="hover-effect"><a href="/about-us">Về chúng tôi</a></li>
+                        <li class="hover-effect"><a href="/games">Trò chơi</a></li>
+                        <li class="hover-effect"><a href="/news">Tin tức</a></li>
+                        <li class="hover-effect"><a href="/contact">Liên hệ</a></li>
                         <?php if (Yii::$app->user->isGuest){ ?>
-                            <li class="hover-effect"><a href="" data-toggle="modal" data-target="#login">Login</a></li>
+                            <li class="hover-effect"><a href="" data-toggle="modal" data-target="#login">Đăng nhập</a></li>
                         <?php } else { ?>
-                            <li class="hover-effect"><a href="/logout">Logout ( <?= Yii::$app->user->identity->username ?> )</a></li>
+                            <li class="hover-effect"><a href="/logout" data-content="Đăng xuất"> ( <?= Yii::$app->user->identity->username ?> )</a></li>
                         <?php  }?>
 
                     </ul>
@@ -82,15 +82,15 @@ if (Yii::$app->requestedRoute === 'site/index' || Yii::$app->requestedRoute === 
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="hover-effect"><a href="/trang-chu">Home</a></li>
-                        <li class="hover-effect"><a href="/about-us">About</a></li>
-                        <li class="hover-effect"><a href="/games">Games</a></li>
-                        <li class="hover-effect"><a href="/news">News</a></li>
-                        <li class="hover-effect"><a href="/contact">Contact us</a></li>
+                        <li class="hover-effect"><a href="/trang-chu">Trang chủ</a></li>
+                        <li class="hover-effect"><a href="/about-us">Về chúng tôi</a></li>
+                        <li class="hover-effect"><a href="/games">Trò chơi</a></li>
+                        <li class="hover-effect"><a href="/news">Tin tức</a></li>
+                        <li class="hover-effect"><a href="/contact">Liên hệ</a></li>
                         <?php if (Yii::$app->user->isGuest){ ?>
                             <li class="hover-effect"><a href="" data-toggle="modal" data-target="#login">Login</a></li>
                         <?php } else { ?>
-                            <li class="hover-effect"><a href="/logout">Logout ( <?= Yii::$app->user->identity->username ?> )</a></li>
+                            <li class="hover-effect"><a href="/logout" data-content="Đăng xuất">( <?= Yii::$app->user->identity->username ?> )</a></li>
                         <?php  }?>
                     </ul>
                 </div>

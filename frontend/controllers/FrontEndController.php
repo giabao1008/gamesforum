@@ -20,7 +20,7 @@ class FrontEndController extends \yii\web\Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error','index','view','signup','games','contact','about','news'],
+                        'actions' => ['login', 'error','index','view','signup','games','contact','about','news','request-password-reset','reset-password'],
                         'allow' => true,
                     ],
                     [

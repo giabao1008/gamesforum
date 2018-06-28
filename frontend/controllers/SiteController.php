@@ -20,6 +20,7 @@ use console\models\games\GameType;
 use console\models\banners\Banners;
 use console\models\games\SearchGames;
 use yii\web\UploadedFile;
+use backend\Url\Friendly;
 /**
  * Site controller
  */
@@ -195,7 +196,7 @@ return $this->render('index', [
         }
 
         if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->resetPassword()) {
-            Yii::$app->session->setFlash('success', 'New password saved.');
+             Yii::$app->session->setFlash('success', 'New password saved.');
 
             return $this->goHome();
         }
@@ -226,6 +227,7 @@ return $this->render('index', [
             if ($upload) {
                 $upload->saveAs('../../backend/web/uploads/' . $upload->name);
                 $model->logo = $upload->name;
+                $model->slug = Friendly::url_friendly($model->slug);
                 $model->create_at = time();
                 $model->update_at = time();
                 $model->is_Hot = 1 ;

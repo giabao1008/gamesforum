@@ -23,7 +23,7 @@ return [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
-            'loginUrl' => 'error-403.html'
+            'loginUrl' => 'error.html'
 //   '
 
         ],

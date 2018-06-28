@@ -61,7 +61,7 @@ class Games extends \yii\db\ActiveRecord
             'game_type' => 'Loại Games',
             'name' => 'Tên',
             'logo' => 'Ảnh đại diện cho game',
-            'slug' => 'đường dẫn url',
+            'slug' => 'Đường dẫn url',
             'description' => 'Mô tả',
             'author' => 'Tác giả',
             'file' => 'Upload logo game',
@@ -70,8 +70,8 @@ class Games extends \yii\db\ActiveRecord
             'is_Hot' => 'Is  Hot',
             'create_at' => 'Create At',
             'update_at' => 'Update At',
-            'status' => 'Status',
-            'create_by' => 'Create By',
+            'status' => 'Trạng thái',
+            'create_by' => 'Tạo bởi',
             'download' => 'Link download',
         ];
     }

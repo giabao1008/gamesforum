@@ -2,7 +2,7 @@
     use console\models\contacts\Contacts;
     use console\models\games\Games;
     $total = Contacts::find()->count();
-    $game = count(Games::find()->where(['<>','create_by','admin'])->orderBy(['create_at' => SORT_DESC])->all());
+    $game = count(Games::find()->where(['<>','create_by','admin'])->andWhere(['update_at'=>'create_at'])->orderBy(['create_at' => SORT_DESC])->all());
 ?>
 <div id="sidebar" role="navigation">
     <div class="panel panel-info">

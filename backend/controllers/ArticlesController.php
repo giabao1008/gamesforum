@@ -99,6 +99,7 @@ class ArticlesController extends AppController
             if ($upload) {
                 $upload->saveAs('uploads/' . $upload->name);
                 $model->image = $upload->name;
+                $model->slug = Friendly::url_friendly($model->slug);
                 $model->create_at = time();
                 $model->update_at= time();
                 $model->create_by = Yii::$app->user->identity->username;

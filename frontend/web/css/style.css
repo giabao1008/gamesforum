@@ -1180,7 +1180,9 @@ p.agileits{
 .events-right-top{
 	background:url(../images/e2.jpg) no-repeat 0px 0px;
 	background-size:cover;
-	min-height:200px;
+	min-height: 195px;
+	margin-bottom: 10px;
+	margin-left: 15px;
 }
 .events-right-bottom{
 	background:url(../images/e3.jpg) no-repeat 0px 0px;

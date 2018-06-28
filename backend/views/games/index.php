@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //  'id',
 
             'name',
-            'download',
+//            'download',
             [
                 'attribute' => 'logo',
                 'format' => 'raw',
